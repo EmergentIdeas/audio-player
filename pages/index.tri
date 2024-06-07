@@ -1,0 +1,17 @@
+__::start__
+<div class="page page-landing">
+
+	<div class="container-wrapper">
+		<div class="container">
+			<div class="player-wrapper">
+				<div class="controls">
+
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+</div>
+__::end__

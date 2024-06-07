@@ -1,0 +1,59 @@
+<div class="player-controls lib-player">
+
+	<div class="library">
+		<div class="kalpa-tree">
+		</div>
+
+		<!-- <div class="drop-zone">
+			drop files here	
+		</div> -->
+
+
+	</div>
+	<div class="playside">
+		<div class="playlist-wrapper">
+			<div class="playlist webhandle-drag-sortable-list">
+			</div>
+			<div class="playlist-bottom-buttons actions">
+				<div class="left">
+					<button class="previous" title="previous track">
+						__::previous-button__
+					</button>
+				</div>
+				<div class="right">
+					<button class="next" title="next track">
+						__::next-button__
+					</button>
+
+				</div>
+			</div>
+		</div>
+		<div class="track-controls">
+			<div class="track-title">
+			</div>
+			<div class="position">
+				<div class="play-pause actions">
+					<button class="play" title="play / pause">
+						__::play-pause-button__
+					</button>
+				</div>
+				<label>
+					<input type="range" name="position" min="0" max="1000" value="0" />
+				</label>
+				<div class="position-text">
+
+				</div>
+			</div>
+			<div class="global-controls">
+				<div class="volume">
+					<label>
+						<input type="range" name="volume" min="0" max="100" value="100" />
+						Volume
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
