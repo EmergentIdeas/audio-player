@@ -520,13 +520,19 @@ body {
 .player-controls .library .kalpa-tree {
   height: 600px;
   width: 500px;
+  width: 100%;
 }
 .player-controls .library .drop-zone {
   border: solid 1px black;
   height: 200px;
 }
+.player-controls .library .lib-controls input[name=libFilter] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
 .lib-player {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(3, 1fr);
 }
 /*# sourceMappingURL=pages.css.map */

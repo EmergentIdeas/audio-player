@@ -111,6 +111,7 @@
 		.kalpa-tree {
 			height: 600px;
 			width: @targetWidth;
+			width: 100%;
 			
 		}
 		
@@ -118,10 +119,18 @@
 			border: solid 1px black;
 			height: 200px;
 		}
+		
+		.lib-controls {
+			input[name=libFilter] {
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+			}
+		}
 	}
 }
 
 .lib-player {
 	display:grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: repeat(3, 1fr);
 }

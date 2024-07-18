@@ -3,12 +3,19 @@
 	<div class="library">
 		<div class="kalpa-tree">
 		</div>
+		<div class="lib-controls">
+			<div class="filter">
+				<input name="libFilter" type="text" placeholder="search" />
+			</div>
+			
+		</div>
 
 		<!-- <div class="drop-zone">
 			drop files here	
 		</div> -->
-
-
+	</div>
+	<div class="selected-details">
+		
 	</div>
 	<div class="playside">
 		<div class="playlist-wrapper">
@@ -17,12 +24,12 @@
 			<div class="playlist-bottom-buttons actions">
 				<div class="left">
 					<button class="previous" title="previous track">
-						__::previous-button__
+						__::./previous-button__
 					</button>
 				</div>
 				<div class="right">
 					<button class="next" title="next track">
-						__::next-button__
+						__::./next-button__
 					</button>
 
 				</div>
@@ -34,7 +41,7 @@
 			<div class="position">
 				<div class="play-pause actions">
 					<button class="play" title="play / pause">
-						__::play-pause-button__
+						__::./play-pause-button__
 					</button>
 				</div>
 				<label>

@@ -28,9 +28,9 @@ export default class PlayControlsView extends View {
 			, 'mouseup input[name="volume"]': 'updatesOn'
 			, 'mousedown input[name="position"]': 'updatesOff'
 			, 'mouseup input[name="position"]': 'updatesOn'
-			, 'dragover .library': 'handleDropzoneDragover'
-			, 'drop .library': 'handleDropzoneDrop'
-			, 'dragstart .kalpa-tree li.node': 'handleNodeDragStart'
+			// , 'dragover .library': 'handleDropzoneDragover'
+			// , 'drop .library': 'handleDropzoneDrop'
+			// , 'dragstart .kalpa-tree li.node': 'handleNodeDragStart'
 			// , 'dragover .drop-zone': 'handleDropzoneDragover'
 			// , 'drop .drop-zone': 'handleDropzoneDrop'
 			// , 'dragover .kalpa-tree': 'handleDropzoneDragover'
@@ -47,90 +47,6 @@ export default class PlayControlsView extends View {
 	}
 	
 	
-	async handleNodeDragStart(evt, selected) {
-		let id = selected.getAttribute('data-id')
-		let dataNode = this.tree.get(id)
-		
-		evt.dataTransfer.setData('text', dataNode.data.name)
-		
-		let label = `data:text/label,${dataNode.label}`
-		evt.dataTransfer.setData(label, label)
-		
-		evt.dataTransfer.setData('data:text/mode', 'external-drag')
-		this.emitter.emit('external-file-item-drag', {
-			action: 'external-file-item-drag'
-			, data: [dataNode].map(node => node.data)
-		})
-	}
-	
-	/**
-	 * Watch for movement of something being dragged
-	 * @param {Event} evt 
-	 * @param {Element} selected 
-	 */
-	handleDropzoneDragover(evt, selected) {
-		evt.preventDefault()
-		evt.stopPropagation()
-	}
-	/**
-	 * Creates permanent cells for external items dropped into the list,
-	 * emits events, and does cleaup
-	 * @param {Event} evt 
-	 * @param {Element} selected 
-	 */
-	handleDropzoneDrop(evt, selected) {
-		evt.preventDefault()
-		
-
-		let p = new Promise(async (resolve, reject) => {
-			let uriList
-			if (evt.dataTransfer) {
-				uriList = evt.dataTransfer.getData('text/uri-list')
-			}
-
-			if (uriList) {
-				// if a link is dropped, there's no exteralDrag object, just a drop object
-
-				if (typeof uriList == 'string') {
-					// Acording to the spec, this should be a list with one uri on every line
-					// In practice, it seems like the browser is eating the return characters
-					// In my tests, I'm passing multiple uris as comma separated. I'm handling
-					// both cases here.
-					let parts = [uriList]
-					for (let sep of ['\r\n', '\n', ',']) {
-						let newParts = []
-						for (let part of parts) {
-							newParts.push(...part.split(sep))
-						}
-						parts = newParts
-					}
-					uriList = parts
-				}
-				cells = this.createCellsForUriList(uriList)
-			}
-			else {
-				let files = await dataItemWorker.getFileEntriesFromEvent(evt, {
-					keepDirectories: true
-					, recursive: true
-				})
-				for(let file of files) {
-					this.nodesEmitter.emit('data', {
-						parentId: 0
-						, id: counter++
-						, label: file.name
-						, file: file
-						, data: file
-						, draggable: true
-					})
-				}
-				setTimeout(() => {
-					this.el.querySelectorAll('.kalpa-tree li.node').forEach(node => node.setAttribute('draggable', true))
-				}, 20)
-			}
-		})
-		return p
-	}
-
 	
 	updatesOff() {
 		this.updates = false

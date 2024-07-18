@@ -1014,47 +1014,47 @@ if (typeof __webpack_require__.g != 'undefined') {
 
 /***/ }),
 
-/***/ "./views/controls.tri":
-/*!****************************!*\
-  !*** ./views/controls.tri ***!
-  \****************************/
+/***/ "./views/dankolz/audio-player/controls.tri":
+/*!*************************************************!*\
+  !*** ./views/dankolz/audio-player/controls.tri ***!
+  \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var tri = __webpack_require__(/*! tripartite */ "./node_modules/tripartite/tripartite.js"); var t = "<div class=\"player-controls lib-player\">\n\n\t<div class=\"library\">\n\t\t<div class=\"kalpa-tree\">\n\t\t<\/div>\n\n\t\t<!-- <div class=\"drop-zone\">\n\t\t\tdrop files here\t\n\t\t<\/div> -->\n\n\n\t<\/div>\n\t<div class=\"playside\">\n\t\t<div class=\"playlist-wrapper\">\n\t\t\t<div class=\"playlist webhandle-drag-sortable-list\">\n\t\t\t<\/div>\n\t\t\t<div class=\"playlist-bottom-buttons actions\">\n\t\t\t\t<div class=\"left\">\n\t\t\t\t\t<button class=\"previous\" title=\"previous track\">\n\t\t\t\t\t\t__::previous-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\t\t\t\t<div class=\"right\">\n\t\t\t\t\t<button class=\"next\" title=\"next track\">\n\t\t\t\t\t\t__::next-button__\n\t\t\t\t\t<\/button>\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t\t<div class=\"track-controls\">\n\t\t\t<div class=\"track-title\">\n\t\t\t<\/div>\n\t\t\t<div class=\"position\">\n\t\t\t\t<div class=\"play-pause actions\">\n\t\t\t\t\t<button class=\"play\" title=\"play \/ pause\">\n\t\t\t\t\t\t__::play-pause-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\t\t\t\t<label>\n\t\t\t\t\t<input type=\"range\" name=\"position\" min=\"0\" max=\"1000\" value=\"0\" \/>\n\t\t\t\t<\/label>\n\t\t\t\t<div class=\"position-text\">\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"global-controls\">\n\t\t\t\t<div class=\"volume\">\n\t\t\t\t\t<label>\n\t\t\t\t\t\t<input type=\"range\" name=\"volume\" min=\"0\" max=\"100\" value=\"100\" \/>\n\t\t\t\t\t\tVolume\n\t\t\t\t\t<\/label>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>\n\n<\/div>"; 
-module.exports = tri.addTemplate("controls", t); 
+var tri = __webpack_require__(/*! tripartite */ "./node_modules/tripartite/tripartite.js"); var t = "<div class=\"player-controls lib-player\">\n\n\t<div class=\"library\">\n\t\t<div class=\"kalpa-tree\">\n\t\t<\/div>\n\t\t<div class=\"lib-controls\">\n\t\t\t<div class=\"filter\">\n\t\t\t\t<input name=\"libFilter\" type=\"text\" placeholder=\"search\" \/>\n\t\t\t<\/div>\n\t\t\t\n\t\t<\/div>\n\n\t\t<!-- <div class=\"drop-zone\">\n\t\t\tdrop files here\t\n\t\t<\/div> -->\n\t<\/div>\n\t<div class=\"selected-details\">\n\t\t\n\t<\/div>\n\t<div class=\"playside\">\n\t\t<div class=\"playlist-wrapper\">\n\t\t\t<div class=\"playlist webhandle-drag-sortable-list\">\n\t\t\t<\/div>\n\t\t\t<div class=\"playlist-bottom-buttons actions\">\n\t\t\t\t<div class=\"left\">\n\t\t\t\t\t<button class=\"previous\" title=\"previous track\">\n\t\t\t\t\t\t__::.\/previous-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\t\t\t\t<div class=\"right\">\n\t\t\t\t\t<button class=\"next\" title=\"next track\">\n\t\t\t\t\t\t__::.\/next-button__\n\t\t\t\t\t<\/button>\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t\t<div class=\"track-controls\">\n\t\t\t<div class=\"track-title\">\n\t\t\t<\/div>\n\t\t\t<div class=\"position\">\n\t\t\t\t<div class=\"play-pause actions\">\n\t\t\t\t\t<button class=\"play\" title=\"play \/ pause\">\n\t\t\t\t\t\t__::.\/play-pause-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\t\t\t\t<label>\n\t\t\t\t\t<input type=\"range\" name=\"position\" min=\"0\" max=\"1000\" value=\"0\" \/>\n\t\t\t\t<\/label>\n\t\t\t\t<div class=\"position-text\">\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"global-controls\">\n\t\t\t\t<div class=\"volume\">\n\t\t\t\t\t<label>\n\t\t\t\t\t\t<input type=\"range\" name=\"volume\" min=\"0\" max=\"100\" value=\"100\" \/>\n\t\t\t\t\t\tVolume\n\t\t\t\t\t<\/label>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>\n\n<\/div>"; 
+module.exports = tri.addTemplate("dankolz/audio-player/controls", t); 
 
 /***/ }),
 
-/***/ "./views/next-button.tri":
-/*!*******************************!*\
-  !*** ./views/next-button.tri ***!
-  \*******************************/
+/***/ "./views/dankolz/audio-player/next-button.tri":
+/*!****************************************************!*\
+  !*** ./views/dankolz/audio-player/next-button.tri ***!
+  \****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var tri = __webpack_require__(/*! tripartite */ "./node_modules/tripartite/tripartite.js"); var t = "<svg class=\"next-button-svg\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" fill=\"#5f6368\"><path d=\"M660-240v-480h80v480h-80Zm-440 0v-480l360 240-360 240Zm80-240Zm0 90 136-90-136-90v180Z\"\/><\/svg>"; 
-module.exports = tri.addTemplate("next-button", t); 
+module.exports = tri.addTemplate("dankolz/audio-player/next-button", t); 
 
 /***/ }),
 
-/***/ "./views/play-pause-button.tri":
-/*!*************************************!*\
-  !*** ./views/play-pause-button.tri ***!
-  \*************************************/
+/***/ "./views/dankolz/audio-player/play-pause-button.tri":
+/*!**********************************************************!*\
+  !*** ./views/dankolz/audio-player/play-pause-button.tri ***!
+  \**********************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var tri = __webpack_require__(/*! tripartite */ "./node_modules/tripartite/tripartite.js"); var t = "\n<svg class=\"play-pause-button-svg\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" fill=\"#5f6368\"><path d=\"M200-312v-336l240 168-240 168Zm320-8v-320h80v320h-80Zm160 0v-320h80v320h-80Z\"\/><\/svg>"; 
-module.exports = tri.addTemplate("play-pause-button", t); 
+module.exports = tri.addTemplate("dankolz/audio-player/play-pause-button", t); 
 
 /***/ }),
 
-/***/ "./views/previous-button.tri":
-/*!***********************************!*\
-  !*** ./views/previous-button.tri ***!
-  \***********************************/
+/***/ "./views/dankolz/audio-player/previous-button.tri":
+/*!********************************************************!*\
+  !*** ./views/dankolz/audio-player/previous-button.tri ***!
+  \********************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var tri = __webpack_require__(/*! tripartite */ "./node_modules/tripartite/tripartite.js"); var t = "<svg class=\"previous-button-svg\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\" fill=\"#5f6368\"><path d=\"M220-240v-480h80v480h-80Zm520 0L380-480l360-240v480Zm-80-240Zm0 90v-180l-136 90 136 90Z\"\/><\/svg>"; 
-module.exports = tri.addTemplate("previous-button", t); 
+module.exports = tri.addTemplate("dankolz/audio-player/previous-button", t); 
 
 /***/ }),
 
@@ -1114,6 +1114,295 @@ function stop() {
 
 /***/ }),
 
+/***/ "./client-lib/library-view.mjs":
+/*!*************************************!*\
+  !*** ./client-lib/library-view.mjs ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LibraryView)
+/* harmony export */ });
+/* harmony import */ var _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @webhandle/backbone-view */ "./node_modules/@webhandle/backbone-view/client-js/index.js");
+/* harmony import */ var kalpa_tree_on_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! kalpa-tree-on-page */ "./node_modules/kalpa-tree-on-page/client-js/kalpa-tree-loader.js");
+/* harmony import */ var _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @webhandle/minimal-browser-event-emitter */ "./node_modules/@webhandle/minimal-browser-event-emitter/client-js/index.js");
+/* harmony import */ var _webhandle_drag_sortable_list_client_lib_data_item_worker_mjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @webhandle/drag-sortable-list/client-lib/data-item-worker.mjs */ "./node_modules/@webhandle/drag-sortable-list/client-lib/data-item-worker.mjs");
+
+
+
+
+
+
+let dataItemWorker = new _webhandle_drag_sortable_list_client_lib_data_item_worker_mjs__WEBPACK_IMPORTED_MODULE_3__["default"]()
+
+let counter = 1
+
+class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.View {
+
+	/**
+	 * Setup the event listners and default objects.
+	 * @param {Object} options 
+	 */
+	preinitialize(options = {}) {
+		this.events = Object.assign({}, {
+			'dragover .': 'handleDropzoneDragover'
+			, 'drop .': 'handleDropzoneDrop'
+			, 'dragstart .kalpa-tree li.node': 'handleNodeDragStart'
+			, 'keydown input[name="libFilter"]': 'handleSearch'
+			, 'change input[name="libFilter"]': 'handleSearch'
+			// , 'dragover .drop-zone': 'handleDropzoneDragover'
+			// , 'drop .drop-zone': 'handleDropzoneDrop'
+			// , 'dragover .kalpa-tree': 'handleDropzoneDragover'
+			// , 'drop .kapla-tree': 'handleDropzoneDrop'
+
+		}, options.events)
+		options.events = this.events
+		if (!this.emitter) {
+			this.emitter = options.emitter || new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__["default"]()
+		}
+		this.nodesEmitter = new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__["default"]()
+		this.nodesByPath = {}
+	}
+	
+	getFullPath(path) {
+		let parts = path.split('/').filter(item => !!item)
+		return parts.join('/')
+	}
+	getParentPath(path) {
+		let parts = path.split('/').filter(item => !!item)
+		if(parts.length < 2) {
+			return ''
+		}
+		parts.pop()
+		return parts.join('/')
+	}
+	
+
+	getTreePathParts(path) {
+		let extExp = /(.*)(\..{3,4})$/i
+		let segments = path.match(extExp)
+		if(segments) {
+			path = segments[1]
+		}
+		let pathParts = path.split('/').filter(item => !!item)
+		let name = pathParts.pop()
+		let nameParts = name.split(' - ').filter(item => !!item).map(item => item.trim())
+		
+		let pathInfo = {
+
+		}
+		if(nameParts.length == 4) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.album = nameParts[1]
+			pathInfo.trackNum = nameParts[2]
+			pathInfo.name = nameParts[3]
+		}
+		else if(nameParts.length == 3) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.album = nameParts[1]
+			pathInfo.name = nameParts[2]
+		}
+		else if(nameParts.length == 2) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.name = nameParts[1]
+		}
+		else if(nameParts.length > 4) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.album = nameParts[1]
+			pathInfo.trackNum = nameParts[2]
+			pathInfo.name = nameParts[nameParts.length - 1]
+		}
+		else if(nameParts.length == 1) {
+			pathInfo.name = nameParts[0]
+			
+			if(pathParts.length > 0) {
+				pathInfo.artist = pathParts[pathParts.length - 1]
+			}
+		}
+
+		return pathInfo
+	}
+	
+
+
+	async handleNodeDragStart(evt, selected) {
+		let id = selected.getAttribute('data-id')
+		let dataNode = this.tree.get(id)
+
+		evt.dataTransfer.setData('text', dataNode.data.name)
+
+		let label = `data:text/label,${dataNode.label}`
+		evt.dataTransfer.setData(label, label)
+
+		evt.dataTransfer.setData('data:text/mode', 'external-drag')
+		this.emitter.emit('external-file-item-drag', {
+			action: 'external-file-item-drag'
+			, data: [dataNode].map(node => node.data)
+		})
+	}
+
+	handleSearch(evt, selected) {
+		// evt.preventDefault()
+		// evt.stopPropagation()
+		setTimeout(() => {
+			this.tree.search(selected.value)
+
+		}, 1)
+	}
+	/**
+	 * Watch for movement of something being dragged
+	 * @param {Event} evt 
+	 * @param {Element} selected 
+	 */
+	handleDropzoneDragover(evt, selected) {
+		evt.preventDefault()
+		evt.stopPropagation()
+	}
+	/**
+	 * Creates permanent cells for external items dropped into the list,
+	 * emits events, and does cleaup
+	 * @param {Event} evt 
+	 * @param {Element} selected 
+	 */
+	handleDropzoneDrop(evt, selected) {
+		evt.preventDefault()
+
+
+		let p = new Promise(async (resolve, reject) => {
+			let uriList
+			if (evt.dataTransfer) {
+				uriList = evt.dataTransfer.getData('text/uri-list')
+			}
+
+			if (uriList) {
+				// if a link is dropped, there's no exteralDrag object, just a drop object
+
+				if (typeof uriList == 'string') {
+					// Acording to the spec, this should be a list with one uri on every line
+					// In practice, it seems like the browser is eating the return characters
+					// In my tests, I'm passing multiple uris as comma separated. I'm handling
+					// both cases here.
+					let parts = [uriList]
+					for (let sep of ['\r\n', '\n', ',']) {
+						let newParts = []
+						for (let part of parts) {
+							newParts.push(...part.split(sep))
+						}
+						parts = newParts
+					}
+					uriList = parts
+				}
+				cells = this.createCellsForUriList(uriList)
+			}
+			else {
+				let files = await dataItemWorker.getFileEntriesFromEvent(evt, {
+					keepDirectories: false
+					, recursive: true
+				})
+				let newNodesPaths = []
+				for (let file of files) {
+					let parentId = 0
+					let treePath = this.getTreePathParts(file.fullPath)
+					let parentPath = treePath.album ? treePath.artist + '/' + treePath.album : treePath.artist
+					let parent = this.nodesByPath[parentPath]
+					
+					let artistNode
+					let albumNode
+					if(!parent && treePath.artist) {
+						artistNode = this.nodesByPath[treePath.artist]
+						if(!artistNode) {
+							artistNode = {
+								parentId: parentId
+								, id: counter++
+								, label: treePath.artist
+							}
+							
+							this.nodesByPath[treePath.artist] = artistNode
+							newNodesPaths.push(treePath.artist)
+						}
+						if(treePath.album) {
+							// This can't exist yet otherwise we would have found it as the parent
+							albumNode = {
+								parentId: artistNode.id
+								, id: counter++
+								, label: treePath.album
+							}
+							this.nodesByPath[parentPath] = albumNode
+							newNodesPaths.push(parentPath)
+							parent = albumNode
+						}
+						else {
+							parent = artistNode
+						}
+					}
+					
+					if(parent) {
+						parentId = parent.id
+					}
+					
+					let add = {
+						parentId: parentId
+						, id: counter++
+						, label: treePath.name
+						, file: file
+						, data: file
+						, mediaMeta: treePath
+					}
+					
+					let path = (parentPath ? parentPath + '/' : '') + treePath.name
+					this.nodesByPath[path] = add
+					newNodesPaths.push(path)
+				}
+				newNodesPaths.sort()
+				for(let path of newNodesPaths) {
+					this.nodesEmitter.emit('data', this.nodesByPath[path])
+				}
+			}
+		})
+		return p
+	}
+	
+	nodeSelectedFromTree(node) {
+		this.el.querySelector('input[name="libFilter"]').value = null
+
+	}
+
+	render() {
+		let view = this
+
+		kalpa_tree_on_page__WEBPACK_IMPORTED_MODULE_1__({
+			stream: view.nodesEmitter
+			, treeContainerSelector: '.player-controls .library .kalpa-tree'
+		}).then(tree => {
+			view.tree = tree
+			let rootNode = {
+				id: 0
+				, label: 'music'
+			}
+			view.nodesByPath[''] = rootNode
+			view.nodesEmitter.emit('data', rootNode)
+			
+			this.tree.on('select', (node) => {
+				view.nodeSelectedFromTree(node)
+			})
+
+			let updateDraggable = () => {
+				view.el.querySelectorAll('.kalpa-tree li.node').forEach(node => node.setAttribute('draggable', true))
+				setTimeout(() => {
+					view.el.querySelectorAll('.kalpa-tree li.node').forEach(node => node.setAttribute('draggable', true))
+				}, 200)
+			}
+			tree.on('rebind', updateDraggable)
+			tree.on('rebind:exit', updateDraggable)
+		})
+
+	}
+
+}
+
+/***/ }),
+
 /***/ "./client-lib/player-controls.mjs":
 /*!****************************************!*\
   !*** ./client-lib/player-controls.mjs ***!
@@ -1158,9 +1447,9 @@ class PlayControlsView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE
 			, 'mouseup input[name="volume"]': 'updatesOn'
 			, 'mousedown input[name="position"]': 'updatesOff'
 			, 'mouseup input[name="position"]': 'updatesOn'
-			, 'dragover .library': 'handleDropzoneDragover'
-			, 'drop .library': 'handleDropzoneDrop'
-			, 'dragstart .kalpa-tree li.node': 'handleNodeDragStart'
+			// , 'dragover .library': 'handleDropzoneDragover'
+			// , 'drop .library': 'handleDropzoneDrop'
+			// , 'dragstart .kalpa-tree li.node': 'handleNodeDragStart'
 			// , 'dragover .drop-zone': 'handleDropzoneDragover'
 			// , 'drop .drop-zone': 'handleDropzoneDrop'
 			// , 'dragover .kalpa-tree': 'handleDropzoneDragover'
@@ -1177,90 +1466,6 @@ class PlayControlsView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE
 	}
 	
 	
-	async handleNodeDragStart(evt, selected) {
-		let id = selected.getAttribute('data-id')
-		let dataNode = this.tree.get(id)
-		
-		evt.dataTransfer.setData('text', dataNode.data.name)
-		
-		let label = `data:text/label,${dataNode.label}`
-		evt.dataTransfer.setData(label, label)
-		
-		evt.dataTransfer.setData('data:text/mode', 'external-drag')
-		this.emitter.emit('external-file-item-drag', {
-			action: 'external-file-item-drag'
-			, data: [dataNode].map(node => node.data)
-		})
-	}
-	
-	/**
-	 * Watch for movement of something being dragged
-	 * @param {Event} evt 
-	 * @param {Element} selected 
-	 */
-	handleDropzoneDragover(evt, selected) {
-		evt.preventDefault()
-		evt.stopPropagation()
-	}
-	/**
-	 * Creates permanent cells for external items dropped into the list,
-	 * emits events, and does cleaup
-	 * @param {Event} evt 
-	 * @param {Element} selected 
-	 */
-	handleDropzoneDrop(evt, selected) {
-		evt.preventDefault()
-		
-
-		let p = new Promise(async (resolve, reject) => {
-			let uriList
-			if (evt.dataTransfer) {
-				uriList = evt.dataTransfer.getData('text/uri-list')
-			}
-
-			if (uriList) {
-				// if a link is dropped, there's no exteralDrag object, just a drop object
-
-				if (typeof uriList == 'string') {
-					// Acording to the spec, this should be a list with one uri on every line
-					// In practice, it seems like the browser is eating the return characters
-					// In my tests, I'm passing multiple uris as comma separated. I'm handling
-					// both cases here.
-					let parts = [uriList]
-					for (let sep of ['\r\n', '\n', ',']) {
-						let newParts = []
-						for (let part of parts) {
-							newParts.push(...part.split(sep))
-						}
-						parts = newParts
-					}
-					uriList = parts
-				}
-				cells = this.createCellsForUriList(uriList)
-			}
-			else {
-				let files = await dataItemWorker.getFileEntriesFromEvent(evt, {
-					keepDirectories: true
-					, recursive: true
-				})
-				for(let file of files) {
-					this.nodesEmitter.emit('data', {
-						parentId: 0
-						, id: counter++
-						, label: file.name
-						, file: file
-						, data: file
-						, draggable: true
-					})
-				}
-				setTimeout(() => {
-					this.el.querySelectorAll('.kalpa-tree li.node').forEach(node => node.setAttribute('draggable', true))
-				}, 20)
-			}
-		})
-		return p
-	}
-
 	
 	updatesOff() {
 		this.updates = false
@@ -2982,10 +3187,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _test1_tri__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test1.tri */ "./views/test1.tri");
 /* harmony import */ var _test2_tri__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test2.tri */ "./views/test2.tri");
-/* harmony import */ var _controls_tri__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controls.tri */ "./views/controls.tri");
-/* harmony import */ var _play_pause_button_tri__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./play-pause-button.tri */ "./views/play-pause-button.tri");
-/* harmony import */ var _next_button_tri__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./next-button.tri */ "./views/next-button.tri");
-/* harmony import */ var _previous_button_tri__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./previous-button.tri */ "./views/previous-button.tri");
+/* harmony import */ var _dankolz_audio_player_controls_tri__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dankolz/audio-player/controls.tri */ "./views/dankolz/audio-player/controls.tri");
+/* harmony import */ var _dankolz_audio_player_play_pause_button_tri__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dankolz/audio-player/play-pause-button.tri */ "./views/dankolz/audio-player/play-pause-button.tri");
+/* harmony import */ var _dankolz_audio_player_next_button_tri__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dankolz/audio-player/next-button.tri */ "./views/dankolz/audio-player/next-button.tri");
+/* harmony import */ var _dankolz_audio_player_previous_button_tri__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dankolz/audio-player/previous-button.tri */ "./views/dankolz/audio-player/previous-button.tri");
 
 
 
@@ -2996,7 +3201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let test1 = _test1_tri__WEBPACK_IMPORTED_MODULE_0__
 let test2 = _test2_tri__WEBPACK_IMPORTED_MODULE_1__
-let playerControls = _controls_tri__WEBPACK_IMPORTED_MODULE_2__
+let playerControls = _dankolz_audio_player_controls_tri__WEBPACK_IMPORTED_MODULE_2__
 
 /***/ })
 
@@ -3076,16 +3281,17 @@ var __webpack_exports__ = {};
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "./client-js/index.js");
-/* harmony import */ var _webhandle_drag_sortable_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @webhandle/drag-sortable-list */ "./node_modules/@webhandle/drag-sortable-list/client-lib/list-view.mjs");
-/* harmony import */ var _client_lib_player_controls_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../client-lib/player-controls.mjs */ "./client-lib/player-controls.mjs");
-/* harmony import */ var _client_lib_player_mjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../client-lib/player.mjs */ "./client-lib/player.mjs");
-/* harmony import */ var _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @webhandle/minimal-browser-event-emitter */ "./node_modules/@webhandle/minimal-browser-event-emitter/client-js/index.js");
-/* harmony import */ var _client_lib_playlist_view_mjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../client-lib/playlist-view.mjs */ "./client-lib/playlist-view.mjs");
+/* harmony import */ var _client_lib_player_controls_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../client-lib/player-controls.mjs */ "./client-lib/player-controls.mjs");
+/* harmony import */ var _client_lib_player_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../client-lib/player.mjs */ "./client-lib/player.mjs");
+/* harmony import */ var _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @webhandle/minimal-browser-event-emitter */ "./node_modules/@webhandle/minimal-browser-event-emitter/client-js/index.js");
+/* harmony import */ var _client_lib_playlist_view_mjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../client-lib/playlist-view.mjs */ "./client-lib/playlist-view.mjs");
+/* harmony import */ var _client_lib_library_view_mjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../client-lib/library-view.mjs */ "./client-lib/library-view.mjs");
 /* harmony import */ var kalpa_tree_on_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! kalpa-tree-on-page */ "./node_modules/kalpa-tree-on-page/client-js/kalpa-tree-loader.js");
 
 (0,_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
 
 
+// import ListView from '@webhandle/drag-sortable-list'
 ;
 
 
@@ -3094,118 +3300,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let emitter = new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_4__["default"]()
+let emitter = new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_3__["default"]()
 
 let controls = document.querySelector('.controls')
-let controlsView = new _client_lib_player_controls_mjs__WEBPACK_IMPORTED_MODULE_2__["default"]({
+let controlsView = new _client_lib_player_controls_mjs__WEBPACK_IMPORTED_MODULE_1__["default"]({
 	el: controls
 	, emitter: emitter
 })
 controlsView.render()
 
 let playlist = document.querySelector('.playlist')
-let playlistView = new _client_lib_playlist_view_mjs__WEBPACK_IMPORTED_MODULE_5__["default"]({
+let playlistView = new _client_lib_playlist_view_mjs__WEBPACK_IMPORTED_MODULE_4__["default"]({
 	el: playlist
 	, emitter: emitter
 })
-// let playlistView = new ListView({
-// 	el: playlist
-// 	, emitter: emitter
-// 	, mobileHandleSelector: '.handle'
-// 	, events: {
-// 		'dblclick .cell': 'doubleClick'
-// 		, 'click .remove': 'removeCell'
-// 	}
-// 	, doubleClick(evt, selected) {
-// 		controlsView.emitter.emit('play-item', {
-// 			item: selected
-// 		})
-// 	}
-// 	, removeCell(evt, selected) {
-// 		let cell = selected.closest('.cell')
-
-// 		this.emitter.emit('list-change', {
-// 			type: 'remove'
-// 			, cells: [cell]
-// 			, event: evt
-// 		})
-// 		cell.remove()
-// 	}
-// 	/**
-// 	 * Creates permanent cells for files dropped into the list
-// 	 * @param {array} files 
-// 	 * @returns an array of Elements
-// 	 */
-// 	, createCellsForFiles(files) {
-// 		let cells = files.map(file => {
-// 			let html = `<div class="cell">
-// 				<span class="handle">↕</span>
-// 				<span class="title">${file.name}</span>
-// 				<span class="remove">&times</span>
-// 			</div>`
-// 			let el = this._makeElementFromHTML(html)
-// 			el.data = file
-// 			return el
-// 		})
-// 		return cells
-// 	}
-
-// 	/**
-// 	 * Creates permanent cells for resource objects dropped into the list
-// 	 * @param {array[string]} uriList 
-// 	 * @returns an array of Elements
-// 	 */
-// 	, createCellsForUriList(uriList) {
-// 		if(!Array.isArray(uriList)) {
-// 			uriList = [uriList]
-// 		}
-// 		let cells = uriList.map(uri => {
-// 			let html = `<div class="cell">
-// 				<span class="handle">↕</span>
-// 				<span class="title">${uri}</span>
-// 				<span class="remove">&times</span>
-// 			</div>`
-// 			let el = this._makeElementFromHTML(html)
-// 			el.data = uri
-// 			return el
-// 		})
-// 		return cells
-// 	}
-// })
 playlistView.render()
 
 
-let player = new _client_lib_player_mjs__WEBPACK_IMPORTED_MODULE_3__["default"]({
+let player = new _client_lib_player_mjs__WEBPACK_IMPORTED_MODULE_2__["default"]({
 	controlEvents: emitter
 	, playlist: playlistView
 })
 
 
-let nodesEmitter = new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_4__["default"]()
-
-kalpa_tree_on_page__WEBPACK_IMPORTED_MODULE_6__({
-	stream: nodesEmitter
-	, treeContainerSelector: '.player-controls .library .kalpa-tree'
-}).then(tree => {
-	nodesEmitter.emit('data', {
-		id: 0
-		, label: 'music'
-	})
-	controlsView.tree = tree
-	controlsView.nodesEmitter = nodesEmitter
-
-
-	tree.on('dndstart', function (eventData) {
-		console.log('drag start')
-		// eventData.el -> The DOM node the user is moving
-		// eventData.traveler -> The DOM traveling node created by the tree which can actually be moved
-		// eventData.layout -> Layout data describing the moving node
-		// eventData.data -> Data bound to this tree node
-	})
-
-
-	// Do something with the tree
+let library = document.querySelector('.library')
+let libraryView = new _client_lib_library_view_mjs__WEBPACK_IMPORTED_MODULE_5__["default"]({
+	el: library
+	, emitter: emitter
 })
+libraryView.render()
+
+
 })();
 
 
