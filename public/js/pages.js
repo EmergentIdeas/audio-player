@@ -1114,6 +1114,80 @@ function stop() {
 
 /***/ }),
 
+/***/ "./client-lib/album.mjs":
+/*!******************************!*\
+  !*** ./client-lib/album.mjs ***!
+  \******************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Album: () => (/* binding */ Album)
+/* harmony export */ });
+class Album {
+	constructor(options) {
+		Object.assign(this, options)
+		this.tracks = []
+	}
+	
+	addTrack(track) {
+		this.tracks.push(track)
+	}
+}
+
+/***/ }),
+
+/***/ "./client-lib/artist.mjs":
+/*!*******************************!*\
+  !*** ./client-lib/artist.mjs ***!
+  \*******************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Artist: () => (/* binding */ Artist)
+/* harmony export */ });
+/* harmony import */ var _album_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./album.mjs */ "./client-lib/album.mjs");
+
+
+class Artist {
+	constructor(options) {
+		Object.assign(this, options)
+		this.albums = {}
+	}
+	
+	getAlbum(name) {
+		if(!name) {
+			name = ''
+		}
+		if(name in this.albums) {
+			return this.albums[name]
+		}
+		let album = new _album_mjs__WEBPACK_IMPORTED_MODULE_0__.Album({name: name})
+		this.albums[name] = album
+		return album
+	}
+	
+	getNamedAlbums() {
+		let albums = []
+		for(let key of Object.keys(this.albums)) {
+			if(key) {
+				albums.push(this.albums[key])
+			}
+		}
+		return albums
+	}
+	
+	getUnnamedAlbum() {
+		if('' in this.albums) {
+			return this.albums['']
+		}
+		return null
+	}
+}
+
+/***/ }),
+
 /***/ "./client-lib/library-view.mjs":
 /*!*************************************!*\
   !*** ./client-lib/library-view.mjs ***!
@@ -1128,6 +1202,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var kalpa_tree_on_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! kalpa-tree-on-page */ "./node_modules/kalpa-tree-on-page/client-js/kalpa-tree-loader.js");
 /* harmony import */ var _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @webhandle/minimal-browser-event-emitter */ "./node_modules/@webhandle/minimal-browser-event-emitter/client-js/index.js");
 /* harmony import */ var _webhandle_drag_sortable_list_client_lib_data_item_worker_mjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @webhandle/drag-sortable-list/client-lib/data-item-worker.mjs */ "./node_modules/@webhandle/drag-sortable-list/client-lib/data-item-worker.mjs");
+/* harmony import */ var _media_library_mjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./media-library.mjs */ "./client-lib/media-library.mjs");
+
 
 
 
@@ -1162,70 +1238,70 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 			this.emitter = options.emitter || new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__["default"]()
 		}
 		this.nodesEmitter = new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__["default"]()
-		this.nodesByPath = {}
-		
+
+		this.mediaLibrary = new _media_library_mjs__WEBPACK_IMPORTED_MODULE_4__.MediaLibrary()
 		this.uniquify = 1
 	}
-	
+
 	getFullPath(path) {
 		let parts = path.split('/').filter(item => !!item)
 		return parts.join('/')
 	}
 	getParentPath(path) {
 		let parts = path.split('/').filter(item => !!item)
-		if(parts.length < 2) {
+		if (parts.length < 2) {
 			return ''
 		}
 		parts.pop()
 		return parts.join('/')
 	}
-	
+
 
 	getTreePathParts(path) {
 		let extExp = /(.*)(\..{3,4})$/i
 		let segments = path.match(extExp)
-		if(segments) {
+		if (segments) {
 			path = segments[1]
 		}
 		let pathParts = path.split('/').filter(item => !!item)
 		let name = pathParts.pop()
 		let nameParts = name.split(' - ').filter(item => !!item).map(item => item.trim())
-		
+
 		let pathInfo = {
 
 		}
-		if(nameParts.length == 4) {
+		if (nameParts.length == 4) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.album = nameParts[1]
 			pathInfo.trackNum = nameParts[2]
 			pathInfo.name = nameParts[3]
 		}
-		else if(nameParts.length == 3) {
+		else if (nameParts.length == 3) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.album = nameParts[1]
 			pathInfo.name = nameParts[2]
 		}
-		else if(nameParts.length == 2) {
+		else if (nameParts.length == 2) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.name = nameParts[1]
 		}
-		else if(nameParts.length > 4) {
+		else if (nameParts.length > 4) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.album = nameParts[1]
 			pathInfo.trackNum = nameParts[2]
 			pathInfo.name = nameParts[nameParts.length - 1]
 		}
-		else if(nameParts.length == 1) {
+		else if (nameParts.length == 1) {
 			pathInfo.name = nameParts[0]
-			
-			if(pathParts.length > 0) {
+
+			if (pathParts.length > 0) {
 				pathInfo.artist = pathParts[pathParts.length - 1]
 			}
 		}
 
 		return pathInfo
 	}
-	
+
 
 
 	async handleNodeDragStart(evt, selected) {
@@ -1302,76 +1378,74 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 					keepDirectories: false
 					, recursive: true
 				})
-				let newNodesPaths = new Set()
 				for (let file of files) {
-					let parentId = 0
-					let treePath = this.getTreePathParts(file.fullPath)
-					let parentPath = treePath.album ? treePath.artist + '/' + treePath.album : treePath.artist
-					let parent = this.nodesByPath[parentPath]
-					
-					let artistNode
-					let albumNode
-					if(!parent && treePath.artist) {
-						artistNode = this.nodesByPath[treePath.artist]
-						if(!artistNode) {
-							artistNode = {
-								parentId: parentId
-								, id: counter++
-								, label: treePath.artist
-							}
-							
-							this.nodesByPath[treePath.artist] = artistNode
-							newNodesPaths.add(treePath.artist)
-						}
-						if(treePath.album) {
-							// This can't exist yet otherwise we would have found it as the parent
-							albumNode = {
-								parentId: artistNode.id
-								, id: counter++
-								, label: treePath.album
-							}
-							this.nodesByPath[parentPath] = albumNode
-							newNodesPaths.add(parentPath)
-							parent = albumNode
-						}
-						else {
-							parent = artistNode
-						}
-					}
-					
-					if(parent) {
-						parentId = parent.id
-					}
-					
-					let add = {
-						parentId: parentId
-						, id: counter++
-						, label: treePath.name
-						, file: file
-						, data: file
-						, mediaMeta: treePath
-					}
-					
-					let path = (parentPath ? parentPath + '/' : '') + treePath.name
-					
-					if(path in this.nodesByPath) {
-						// We already have a node with this path, maybe because a file has the same name as
-						// a folder.
-						path += this.uniquify++
-					}
-					this.nodesByPath[path] = add
-					newNodesPaths.add(path)
+					this.mediaLibrary.add(file.fullPath, file)
 				}
-				newNodesPaths = [...newNodesPaths]
-				newNodesPaths.sort()
-				for(let path of newNodesPaths) {
-					this.nodesEmitter.emit('data', this.nodesByPath[path])
-				}
+				this.redrawNodes()
 			}
 		})
 		return p
 	}
 	
+	rerootTree() {
+		this.tree.removeNode(0)
+		let rootNode = {
+			id: 0
+			, label: 'music'
+		}
+		this.nodesEmitter.emit('data', rootNode)
+	}
+
+	redrawNodes() {
+		let parentId = 0
+		let newNodes = []
+		this.rerootTree()
+		for (let artist of this.mediaLibrary.getArtistSortedByName()) {
+			let artistNode = {
+				parentId: parentId
+				, id: counter++
+				, label: artist.name
+			}
+			newNodes.push(artistNode)
+			for (let album of artist.getNamedAlbums()) {
+				let albumNode = {
+					parentId: artistNode.id
+					, id: counter++
+					, label: album.name
+				}
+				newNodes.push(albumNode)
+				for (let track of album.tracks) {
+					let trackNode = {
+						parentId: albumNode.id
+						, id: counter++
+						, label: track.name
+						, data: track.data
+						, file: track.file
+						, mediaMeta: track.mediaMeta
+					}
+					newNodes.push(trackNode)
+				}
+			}
+			let unnamedAlbum = artist.getUnnamedAlbum()
+			if (unnamedAlbum) {
+				for (let track of unnamedAlbum.tracks) {
+					let trackNode = {
+						parentId: artistNode.id
+						, id: counter++
+						, label: track.name
+						, data: track.data
+						, file: track.file
+						, mediaMeta: track.mediaMeta
+					}
+					newNodes.push(trackNode)
+				}
+			}
+		}
+		for (let node of newNodes) {
+			this.nodesEmitter.emit('data', node)
+		}
+	}
+
 	nodeSelectedFromTree(node) {
 		this.el.querySelector('input[name="libFilter"]').value = null
 
@@ -1385,13 +1459,8 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 			, treeContainerSelector: '.player-controls .library .kalpa-tree'
 		}).then(tree => {
 			view.tree = tree
-			let rootNode = {
-				id: 0
-				, label: 'music'
-			}
-			view.nodesByPath[''] = rootNode
-			view.nodesEmitter.emit('data', rootNode)
-			
+			this.rerootTree()
+
 			this.tree.on('select', (node) => {
 				view.nodeSelectedFromTree(node)
 			})
@@ -1407,6 +1476,136 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		})
 
 	}
+
+}
+
+/***/ }),
+
+/***/ "./client-lib/media-library.mjs":
+/*!**************************************!*\
+  !*** ./client-lib/media-library.mjs ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MediaLibrary: () => (/* binding */ MediaLibrary)
+/* harmony export */ });
+/* harmony import */ var _album_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./album.mjs */ "./client-lib/album.mjs");
+/* harmony import */ var _artist_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./artist.mjs */ "./client-lib/artist.mjs");
+/* harmony import */ var _track_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./track.mjs */ "./client-lib/track.mjs");
+
+
+
+
+class MediaLibrary {
+	constructor(options) {
+		Object.assign(this, options)
+		this.mediaItems = []
+		this.artists = {}
+	}
+
+	getArtist(name) {
+		let artist = this.artists[name]
+		if (!artist) {
+			artist = new _artist_mjs__WEBPACK_IMPORTED_MODULE_1__.Artist({
+				name: name
+			})
+			this.artists[name] = artist
+		}
+		return artist
+	}
+
+	getTreePathParts(path) {
+		let extExp = /(.*)(\..{3,4})$/i
+		let segments = path.match(extExp)
+		if (segments) {
+			path = segments[1]
+		}
+		let pathParts = path.split('/').filter(item => !!item)
+		let name = pathParts.pop()
+		let nameParts = name.split(' - ').filter(item => !!item).map(item => item.trim())
+
+		let pathInfo = {
+
+		}
+		if (nameParts.length == 4) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.album = nameParts[1]
+			pathInfo.trackNum = nameParts[2]
+			pathInfo.name = nameParts[3]
+		}
+		else if (nameParts.length == 3) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.album = nameParts[1]
+			pathInfo.name = nameParts[2]
+		}
+		else if (nameParts.length == 2) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.name = nameParts[1]
+		}
+		else if (nameParts.length > 4) {
+			pathInfo.artist = nameParts[0]
+			pathInfo.album = nameParts[1]
+			pathInfo.trackNum = nameParts[2]
+			pathInfo.name = nameParts[nameParts.length - 1]
+		}
+		else if (nameParts.length == 1) {
+			pathInfo.name = nameParts[0]
+
+			if (pathParts.length > 0) {
+				pathInfo.artist = pathParts[pathParts.length - 1]
+			}
+		}
+
+		if (!pathInfo.artist) {
+			pathInfo.artist = 'unknown'
+		}
+
+		if (!pathInfo.trackNum) {
+			pathInfo.trackNum = 0
+		}
+
+		if (!pathInfo.album) {
+			pathInfo.album = ''
+		}
+
+		return pathInfo
+	}
+
+	add(path, item) {
+		let treePath = this.getTreePathParts(path)
+		let artist = this.getArtist(treePath.artist)
+		let album = artist.getAlbum(treePath.album)
+
+		let track = new _track_mjs__WEBPACK_IMPORTED_MODULE_2__.Track({
+			name: treePath.name
+			, album: album
+			, artist: artist
+			, file: item
+			, data: item
+			, mediaMeta: treePath
+			, trackNum: treePath.trackNum
+		})
+
+		album.addTrack(track)
+	}
+	
+	getArtistSortedByName() {
+		let names = Object.keys(this.artists)
+		names.sort((one, two) => {
+			one = one.toLocaleLowerCase().trim()
+			two = two.toLocaleLowerCase().trim()
+			return one.localeCompare(two)
+		})
+		
+		let artists = []
+		for(let name of names) {
+			artists.push(this.artists[name])
+		}
+		return artists
+	}
+
 
 }
 
@@ -1903,6 +2102,24 @@ class PlaylistView extends _webhandle_drag_sortable_list__WEBPACK_IMPORTED_MODUL
 			return el
 		})
 		return cells
+	}
+}
+
+/***/ }),
+
+/***/ "./client-lib/track.mjs":
+/*!******************************!*\
+  !*** ./client-lib/track.mjs ***!
+  \******************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Track: () => (/* binding */ Track)
+/* harmony export */ });
+class Track {
+	constructor(options) {
+		Object.assign(this, options)
 	}
 }
 

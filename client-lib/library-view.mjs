@@ -3,6 +3,7 @@ import { View } from '@webhandle/backbone-view'
 import makeTree from 'kalpa-tree-on-page'
 import Emitter from '@webhandle/minimal-browser-event-emitter'
 import DataItemWorker from '@webhandle/drag-sortable-list/client-lib/data-item-worker.mjs'
+import { MediaLibrary } from './media-library.mjs'
 
 let dataItemWorker = new DataItemWorker()
 
@@ -32,70 +33,70 @@ export default class LibraryView extends View {
 			this.emitter = options.emitter || new Emitter()
 		}
 		this.nodesEmitter = new Emitter()
-		this.nodesByPath = {}
-		
+
+		this.mediaLibrary = new MediaLibrary()
 		this.uniquify = 1
 	}
-	
+
 	getFullPath(path) {
 		let parts = path.split('/').filter(item => !!item)
 		return parts.join('/')
 	}
 	getParentPath(path) {
 		let parts = path.split('/').filter(item => !!item)
-		if(parts.length < 2) {
+		if (parts.length < 2) {
 			return ''
 		}
 		parts.pop()
 		return parts.join('/')
 	}
-	
+
 
 	getTreePathParts(path) {
 		let extExp = /(.*)(\..{3,4})$/i
 		let segments = path.match(extExp)
-		if(segments) {
+		if (segments) {
 			path = segments[1]
 		}
 		let pathParts = path.split('/').filter(item => !!item)
 		let name = pathParts.pop()
 		let nameParts = name.split(' - ').filter(item => !!item).map(item => item.trim())
-		
+
 		let pathInfo = {
 
 		}
-		if(nameParts.length == 4) {
+		if (nameParts.length == 4) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.album = nameParts[1]
 			pathInfo.trackNum = nameParts[2]
 			pathInfo.name = nameParts[3]
 		}
-		else if(nameParts.length == 3) {
+		else if (nameParts.length == 3) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.album = nameParts[1]
 			pathInfo.name = nameParts[2]
 		}
-		else if(nameParts.length == 2) {
+		else if (nameParts.length == 2) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.name = nameParts[1]
 		}
-		else if(nameParts.length > 4) {
+		else if (nameParts.length > 4) {
 			pathInfo.artist = nameParts[0]
 			pathInfo.album = nameParts[1]
 			pathInfo.trackNum = nameParts[2]
 			pathInfo.name = nameParts[nameParts.length - 1]
 		}
-		else if(nameParts.length == 1) {
+		else if (nameParts.length == 1) {
 			pathInfo.name = nameParts[0]
-			
-			if(pathParts.length > 0) {
+
+			if (pathParts.length > 0) {
 				pathInfo.artist = pathParts[pathParts.length - 1]
 			}
 		}
 
 		return pathInfo
 	}
-	
+
 
 
 	async handleNodeDragStart(evt, selected) {
@@ -172,76 +173,74 @@ export default class LibraryView extends View {
 					keepDirectories: false
 					, recursive: true
 				})
-				let newNodesPaths = new Set()
 				for (let file of files) {
-					let parentId = 0
-					let treePath = this.getTreePathParts(file.fullPath)
-					let parentPath = treePath.album ? treePath.artist + '/' + treePath.album : treePath.artist
-					let parent = this.nodesByPath[parentPath]
-					
-					let artistNode
-					let albumNode
-					if(!parent && treePath.artist) {
-						artistNode = this.nodesByPath[treePath.artist]
-						if(!artistNode) {
-							artistNode = {
-								parentId: parentId
-								, id: counter++
-								, label: treePath.artist
-							}
-							
-							this.nodesByPath[treePath.artist] = artistNode
-							newNodesPaths.add(treePath.artist)
-						}
-						if(treePath.album) {
-							// This can't exist yet otherwise we would have found it as the parent
-							albumNode = {
-								parentId: artistNode.id
-								, id: counter++
-								, label: treePath.album
-							}
-							this.nodesByPath[parentPath] = albumNode
-							newNodesPaths.add(parentPath)
-							parent = albumNode
-						}
-						else {
-							parent = artistNode
-						}
-					}
-					
-					if(parent) {
-						parentId = parent.id
-					}
-					
-					let add = {
-						parentId: parentId
-						, id: counter++
-						, label: treePath.name
-						, file: file
-						, data: file
-						, mediaMeta: treePath
-					}
-					
-					let path = (parentPath ? parentPath + '/' : '') + treePath.name
-					
-					if(path in this.nodesByPath) {
-						// We already have a node with this path, maybe because a file has the same name as
-						// a folder.
-						path += this.uniquify++
-					}
-					this.nodesByPath[path] = add
-					newNodesPaths.add(path)
+					this.mediaLibrary.add(file.fullPath, file)
 				}
-				newNodesPaths = [...newNodesPaths]
-				newNodesPaths.sort()
-				for(let path of newNodesPaths) {
-					this.nodesEmitter.emit('data', this.nodesByPath[path])
-				}
+				this.redrawNodes()
 			}
 		})
 		return p
 	}
 	
+	rerootTree() {
+		this.tree.removeNode(0)
+		let rootNode = {
+			id: 0
+			, label: 'music'
+		}
+		this.nodesEmitter.emit('data', rootNode)
+	}
+
+	redrawNodes() {
+		let parentId = 0
+		let newNodes = []
+		this.rerootTree()
+		for (let artist of this.mediaLibrary.getArtistSortedByName()) {
+			let artistNode = {
+				parentId: parentId
+				, id: counter++
+				, label: artist.name
+			}
+			newNodes.push(artistNode)
+			for (let album of artist.getNamedAlbums()) {
+				let albumNode = {
+					parentId: artistNode.id
+					, id: counter++
+					, label: album.name
+				}
+				newNodes.push(albumNode)
+				for (let track of album.tracks) {
+					let trackNode = {
+						parentId: albumNode.id
+						, id: counter++
+						, label: track.name
+						, data: track.data
+						, file: track.file
+						, mediaMeta: track.mediaMeta
+					}
+					newNodes.push(trackNode)
+				}
+			}
+			let unnamedAlbum = artist.getUnnamedAlbum()
+			if (unnamedAlbum) {
+				for (let track of unnamedAlbum.tracks) {
+					let trackNode = {
+						parentId: artistNode.id
+						, id: counter++
+						, label: track.name
+						, data: track.data
+						, file: track.file
+						, mediaMeta: track.mediaMeta
+					}
+					newNodes.push(trackNode)
+				}
+			}
+		}
+		for (let node of newNodes) {
+			this.nodesEmitter.emit('data', node)
+		}
+	}
+
 	nodeSelectedFromTree(node) {
 		this.el.querySelector('input[name="libFilter"]').value = null
 
@@ -255,13 +254,8 @@ export default class LibraryView extends View {
 			, treeContainerSelector: '.player-controls .library .kalpa-tree'
 		}).then(tree => {
 			view.tree = tree
-			let rootNode = {
-				id: 0
-				, label: 'music'
-			}
-			view.nodesByPath[''] = rootNode
-			view.nodesEmitter.emit('data', rootNode)
-			
+			this.rerootTree()
+
 			this.tree.on('select', (node) => {
 				view.nodeSelectedFromTree(node)
 			})
