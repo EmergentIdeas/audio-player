@@ -1163,6 +1163,8 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		}
 		this.nodesEmitter = new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__["default"]()
 		this.nodesByPath = {}
+		
+		this.uniquify = 1
 	}
 	
 	getFullPath(path) {
@@ -1300,7 +1302,7 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 					keepDirectories: false
 					, recursive: true
 				})
-				let newNodesPaths = []
+				let newNodesPaths = new Set()
 				for (let file of files) {
 					let parentId = 0
 					let treePath = this.getTreePathParts(file.fullPath)
@@ -1319,7 +1321,7 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 							}
 							
 							this.nodesByPath[treePath.artist] = artistNode
-							newNodesPaths.push(treePath.artist)
+							newNodesPaths.add(treePath.artist)
 						}
 						if(treePath.album) {
 							// This can't exist yet otherwise we would have found it as the parent
@@ -1329,7 +1331,7 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 								, label: treePath.album
 							}
 							this.nodesByPath[parentPath] = albumNode
-							newNodesPaths.push(parentPath)
+							newNodesPaths.add(parentPath)
 							parent = albumNode
 						}
 						else {
@@ -1351,9 +1353,16 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 					}
 					
 					let path = (parentPath ? parentPath + '/' : '') + treePath.name
+					
+					if(path in this.nodesByPath) {
+						// We already have a node with this path, maybe because a file has the same name as
+						// a folder.
+						path += this.uniquify++
+					}
 					this.nodesByPath[path] = add
-					newNodesPaths.push(path)
+					newNodesPaths.add(path)
 				}
+				newNodesPaths = [...newNodesPaths]
 				newNodesPaths.sort()
 				for(let path of newNodesPaths) {
 					this.nodesEmitter.emit('data', this.nodesByPath[path])

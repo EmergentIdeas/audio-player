@@ -33,6 +33,8 @@ export default class LibraryView extends View {
 		}
 		this.nodesEmitter = new Emitter()
 		this.nodesByPath = {}
+		
+		this.uniquify = 1
 	}
 	
 	getFullPath(path) {
@@ -170,7 +172,7 @@ export default class LibraryView extends View {
 					keepDirectories: false
 					, recursive: true
 				})
-				let newNodesPaths = []
+				let newNodesPaths = new Set()
 				for (let file of files) {
 					let parentId = 0
 					let treePath = this.getTreePathParts(file.fullPath)
@@ -189,7 +191,7 @@ export default class LibraryView extends View {
 							}
 							
 							this.nodesByPath[treePath.artist] = artistNode
-							newNodesPaths.push(treePath.artist)
+							newNodesPaths.add(treePath.artist)
 						}
 						if(treePath.album) {
 							// This can't exist yet otherwise we would have found it as the parent
@@ -199,7 +201,7 @@ export default class LibraryView extends View {
 								, label: treePath.album
 							}
 							this.nodesByPath[parentPath] = albumNode
-							newNodesPaths.push(parentPath)
+							newNodesPaths.add(parentPath)
 							parent = albumNode
 						}
 						else {
@@ -221,9 +223,16 @@ export default class LibraryView extends View {
 					}
 					
 					let path = (parentPath ? parentPath + '/' : '') + treePath.name
+					
+					if(path in this.nodesByPath) {
+						// We already have a node with this path, maybe because a file has the same name as
+						// a folder.
+						path += this.uniquify++
+					}
 					this.nodesByPath[path] = add
-					newNodesPaths.push(path)
+					newNodesPaths.add(path)
 				}
+				newNodesPaths = [...newNodesPaths]
 				newNodesPaths.sort()
 				for(let path of newNodesPaths) {
 					this.nodesEmitter.emit('data', this.nodesByPath[path])
