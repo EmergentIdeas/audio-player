@@ -1257,53 +1257,6 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 	}
 
 
-	getTreePathParts(path) {
-		let extExp = /(.*)(\..{3,4})$/i
-		let segments = path.match(extExp)
-		if (segments) {
-			path = segments[1]
-		}
-		let pathParts = path.split('/').filter(item => !!item)
-		let name = pathParts.pop()
-		let nameParts = name.split(' - ').filter(item => !!item).map(item => item.trim())
-
-		let pathInfo = {
-
-		}
-		if (nameParts.length == 4) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.album = nameParts[1]
-			pathInfo.trackNum = nameParts[2]
-			pathInfo.name = nameParts[3]
-		}
-		else if (nameParts.length == 3) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.album = nameParts[1]
-			pathInfo.name = nameParts[2]
-		}
-		else if (nameParts.length == 2) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.name = nameParts[1]
-		}
-		else if (nameParts.length > 4) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.album = nameParts[1]
-			pathInfo.trackNum = nameParts[2]
-			pathInfo.name = nameParts[nameParts.length - 1]
-		}
-		else if (nameParts.length == 1) {
-			pathInfo.name = nameParts[0]
-
-			if (pathParts.length > 0) {
-				pathInfo.artist = pathParts[pathParts.length - 1]
-			}
-		}
-
-		return pathInfo
-	}
-
-
-
 	async handleNodeDragStart(evt, selected) {
 		let id = selected.getAttribute('data-id')
 		let dataNode = this.tree.get(id)
@@ -1422,6 +1375,7 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 						, data: track.data
 						, file: track.file
 						, mediaMeta: track.mediaMeta
+						, track: track
 					}
 					newNodes.push(trackNode)
 				}
@@ -1436,6 +1390,7 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 						, data: track.data
 						, file: track.file
 						, mediaMeta: track.mediaMeta
+						, track: track
 					}
 					newNodes.push(trackNode)
 				}
