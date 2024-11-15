@@ -6,8 +6,9 @@
 		<div class="lib-controls">
 			<div class="filter">
 				<input name="libFilter" type="text" placeholder="search" />
+				<button class="clear" type="button">&times;</button>
 			</div>
-			
+
 		</div>
 
 		<!-- <div class="drop-zone">
@@ -15,7 +16,7 @@
 		</div> -->
 	</div>
 	<div class="selected-details">
-		
+
 	</div>
 	<div class="playside">
 		<div class="playlist-wrapper">
@@ -35,15 +36,22 @@
 				</div>
 			</div>
 		</div>
-		<div class="track-controls">
-			<div class="track-title">
+		<div class="play-controls">
+			<div class="volume">
+				<label>
+					<input type="range" name="volume" min="0" max="100" value="100" />
+					<br>
+
+					<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+						fill="#5f6368">
+						<path
+							d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z" />
+					</svg>
+				</label>
+			</div>
+			<div class="track-info">
 			</div>
 			<div class="position">
-				<div class="play-pause actions">
-					<button class="play" title="play / pause">
-						__::./play-pause-button__
-					</button>
-				</div>
 				<label>
 					<input type="range" name="position" min="0" max="1000" value="0" />
 				</label>
@@ -51,13 +59,13 @@
 
 				</div>
 			</div>
-			<div class="global-controls">
-				<div class="volume">
-					<label>
-						<input type="range" name="volume" min="0" max="100" value="100" />
-						Volume
-					</label>
+			<div class="bottom-controls">
+				<div class="play-pause actions">
+					<button class="play" title="play / pause">
+						__::./play-pause-button__
+					</button>
 				</div>
+
 			</div>
 		</div>
 	</div>

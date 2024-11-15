@@ -1,5 +1,5 @@
 import { default as go } from './index.js'
-go()
+// go()
 
 
 // import ListView from '@webhandle/drag-sortable-list'

@@ -1,11 +1,12 @@
+@import "widths";
 
 .playlist.webhandle-drag-sortable-list {
 	height: 500px;
 	border: solid 1px black;
 	overflow-y: auto;
 	overflow-x: hidden;
-	
-	
+
+
 	.cell {
 		border-top: solid transparent 2px;
 		border-bottom: solid transparent 2px;
@@ -13,42 +14,67 @@
 		background-color: #eeeeee;
 		background-clip: padding-box;
 		padding: 10px;
-		
+
 		display: grid;
 		grid-template-columns: auto 1fr auto;
 		column-gap: 10px;
-		
-		
+
+
 		&.current {
 			background-color: #dddddd;
 		}
+
 		&.dragging {
 			background-color: #cccccc;
 		}
-		
+
 		.remove {
 			border-radius: 50%;
 			height: 1.5em;
 			width: 1.5em;
-			background: rgba(0,0,0,.1);
+			background: rgba(0, 0, 0, .1);
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			opacity: 0;
 			transition: opacity .2s;
 		}
-		
+
 		.handle {
 			display: inline-block;
 			text-align: center;
 			width: 40px;
 			background-color: #dddddd;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-bottom: 5px
 		}
 		
+		.info {
+			.title, .artist {
+				display: block;
+			}
+			.title {
+				font-weight: 600;
+			}
+			.artist {
+				font-size: 80%;
+			}
+		}
+
 		&:hover {
 			.remove {
 				opacity: 1;
 			}
+		}
+		
+		@media( min-width: @tablet-width) {
+			grid-template-columns: 1fr auto;
+			.handle {
+				display: none;
+			}
+
 		}
 	}
 }
@@ -56,71 +82,119 @@
 .player-controls {
 	@targetWidth: 500px;
 
-	.playlist-wrapper {
+	.playside {
 		max-width: @targetWidth;
 	}
-	
+
 	.playlist-bottom-buttons {
 		display: grid;
 		grid-template-columns: repeat(2, auto);
 		margin-top: 5px;
 		column-gap: 10px;
+
 		button {
 			box-sizing: border-box;
 			width: 100%;
 		}
 	}
-	
+
 	.actions {
 		.right {
 			text-align: right;
 		}
+
 		button {
 			border: 0;
 			line-height: 0;
 		}
 	}
-	
+
 	.track-controls {
 		max-width: @targetWidth;
 
 	}
-	
+
 	.track-title {
-		height: 2em;
+		min-height: 2em;
+		margin-bottom: 10px;
 	}
-	
+
 	.position {
 		display: grid;
-		grid-template-columns: auto 1fr auto;
+		grid-template-columns: 1fr auto;
 		column-gap: 20px;
-		
-		& > * {
+
+		&>* {
 			display: flex;
 			align-items: center;
 		}
+
 		input {
 			width: 100%;
 			box-sizing: border-box;
 		}
-
 	}
 	
-	
+	.play-controls {
+		display: grid;
+		column-gap: 20px;
+		grid-template-columns: 1fr auto;
+		grid-template-rows: 1fr auto auto;
+		row-gap: 15px;
+		margin-top: 30px;
+		
+		.volume {
+			grid-column: 2;
+			grid-row: 1 / span 3;
+		}
+
+	}
+
+	.bottom-controls {
+		align-self: end;
+		button {
+			width: 100%;
+		}
+	}
+
+	.volume {
+		text-align: center;
+		input {
+			writing-mode: vertical-lr;
+			direction: rtl;
+			width: 16px;
+			vertical-align: bottom;
+			height: 89px;
+		}
+	}
+
+
 	.library {
 		.kalpa-tree {
 			height: 600px;
 			width: @targetWidth;
 			width: 100%;
-			
+
 		}
-		
+
 		.drop-zone {
 			border: solid 1px black;
 			height: 200px;
 		}
-		
+
 		.lib-controls {
+			.filter {
+				position: relative;
+
+				.clear {
+					position: absolute;
+					right: 5px;
+					top: 3px;
+					border: none;
+					background: transparent;
+				}
+			}
+
 			input[name=libFilter] {
 				display: block;
 				width: 100%;
@@ -131,6 +205,6 @@
 }
 
 .lib-player {
-	display:grid;
+	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 }

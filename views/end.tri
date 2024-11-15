@@ -2,10 +2,10 @@
 <script type="text/javascript" type="module" src="/js/pages.js" defer></script>
 
 <script type="module">
-	eval('console.log("hi")')
+	// eval('console.log("hi")')
 
-	import {default as go} from '/js/index.js'
-	go()
+	// import {default as go} from '/js/index.js'
+	// go()
 
 
 	

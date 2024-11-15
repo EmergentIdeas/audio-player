@@ -40,6 +40,7 @@ export default class Player {
 				, playState: this._getAudioState()
 				, currentItem: this.currentItem
 				, title: this.currentItem.querySelector('.title').innerText
+				, track: this.currentItem.track
 			}
 		}
 		else {
@@ -119,7 +120,7 @@ export default class Player {
 			}
 			this.currentItem = cell
 			if(cell.data) {
-				if(cell.data instanceof File) {
+				if(cell.data instanceof Blob) {
 					cell.objectUrl = this.playFile(cell.data)
 				}
 				else if(cell.data.__proto__.toString() == '[object FileEntry]') {
@@ -133,7 +134,6 @@ export default class Player {
 					this.audio.load()
 					this.audio.play()
 				}
-
 			}
 			this.emitStatus()
 		}

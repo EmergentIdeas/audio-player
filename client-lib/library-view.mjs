@@ -3,7 +3,7 @@ import { View } from '@webhandle/backbone-view'
 import makeTree from 'kalpa-tree-on-page'
 import Emitter from '@webhandle/minimal-browser-event-emitter'
 import DataItemWorker from '@webhandle/drag-sortable-list/client-lib/data-item-worker.mjs'
-import { MediaLibrary } from './media-library.mjs'
+import MediaLibrary from '@dankolz/media-library/lib/media-library.mjs'
 
 let dataItemWorker = new DataItemWorker()
 
@@ -22,6 +22,8 @@ export default class LibraryView extends View {
 			, 'dragstart .kalpa-tree li.node': 'handleNodeDragStart'
 			, 'keydown input[name="libFilter"]': 'handleSearch'
 			, 'change input[name="libFilter"]': 'handleSearch'
+			, 'click .filter .clear': 'clearSearch'
+			, 'dblclick .kalpa-tree .node': 'nodeDoubleClick'
 			// , 'dragover .drop-zone': 'handleDropzoneDragover'
 			// , 'drop .drop-zone': 'handleDropzoneDrop'
 			// , 'dragover .kalpa-tree': 'handleDropzoneDragover'
@@ -51,6 +53,11 @@ export default class LibraryView extends View {
 		return parts.join('/')
 	}
 
+	clearSearch(evt, selected) {
+		let input = this.el.querySelector('input[name="libFilter"]')
+		input.value = ''
+		this.handleSearch(evt, input)
+	}
 
 	async handleNodeDragStart(evt, selected) {
 		let id = selected.getAttribute('data-id')
@@ -65,15 +72,17 @@ export default class LibraryView extends View {
 		this.emitter.emit('external-file-item-drag', {
 			action: 'external-file-item-drag'
 			, data: [dataNode].map(node => node.data)
+			, track: dataNode.track
+			, mediaMeta: dataNode.mediaMeta
 		})
 	}
 
 	handleSearch(evt, selected) {
-		// evt.preventDefault()
-		// evt.stopPropagation()
+		if(evt.key === 'Escape') {
+			selected.value = ''
+		}
 		setTimeout(() => {
 			this.tree.search(selected.value)
-
 		}, 1)
 	}
 	/**
@@ -148,7 +157,7 @@ export default class LibraryView extends View {
 		let parentId = 0
 		let newNodes = []
 		this.rerootTree()
-		for (let artist of this.mediaLibrary.getArtistSortedByName()) {
+		for (let artist of this.mediaLibrary.getArtistsSortedByName()) {
 			let artistNode = {
 				parentId: parentId
 				, id: counter++
@@ -198,6 +207,25 @@ export default class LibraryView extends View {
 
 	nodeSelectedFromTree(node) {
 		this.el.querySelector('input[name="libFilter"]').value = null
+
+	}
+	
+	nodeDoubleClick(evt, selected) {
+		let id = selected.getAttribute('data-id')
+		let dataNode = this.tree.get(id)
+		if(dataNode.track) {
+			this.emitter.emit('enqueue-command', {
+				type: 'enqueue-tracks-command'
+				, tracks: [dataNode.track]
+				, mediaMeta: [dataNode.mediaMeta]
+			})
+		}
+		else if(dataNode.file) {
+			this.emitter.emit('enqueue-command', {
+				type: 'enqueue-files-command',
+				files: [dataNode.file]
+			})
+		}
 
 	}
 

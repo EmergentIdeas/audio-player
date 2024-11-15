@@ -474,11 +474,33 @@ body {
   text-align: center;
   width: 40px;
   background-color: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+.playlist.webhandle-drag-sortable-list .cell .info .title,
+.playlist.webhandle-drag-sortable-list .cell .info .artist {
+  display: block;
+}
+.playlist.webhandle-drag-sortable-list .cell .info .title {
+  font-weight: 600;
+}
+.playlist.webhandle-drag-sortable-list .cell .info .artist {
+  font-size: 80%;
 }
 .playlist.webhandle-drag-sortable-list .cell:hover .remove {
   opacity: 1;
 }
-.player-controls .playlist-wrapper {
+@media (min-width: 900px) {
+  .playlist.webhandle-drag-sortable-list .cell {
+    grid-template-columns: 1fr auto;
+  }
+  .playlist.webhandle-drag-sortable-list .cell .handle {
+    display: none;
+  }
+}
+.player-controls .playside {
   max-width: 500px;
 }
 .player-controls .playlist-bottom-buttons {
@@ -502,11 +524,12 @@ body {
   max-width: 500px;
 }
 .player-controls .track-title {
-  height: 2em;
+  min-height: 2em;
+  margin-bottom: 10px;
 }
 .player-controls .position {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   column-gap: 20px;
 }
 .player-controls .position > * {
@@ -517,6 +540,34 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+.player-controls .play-controls {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto auto;
+  row-gap: 15px;
+  margin-top: 30px;
+}
+.player-controls .play-controls .volume {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+.player-controls .bottom-controls {
+  align-self: end;
+}
+.player-controls .bottom-controls button {
+  width: 100%;
+}
+.player-controls .volume {
+  text-align: center;
+}
+.player-controls .volume input {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 16px;
+  vertical-align: bottom;
+  height: 89px;
+}
 .player-controls .library .kalpa-tree {
   height: 600px;
   width: 500px;
@@ -525,6 +576,16 @@ body {
 .player-controls .library .drop-zone {
   border: solid 1px black;
   height: 200px;
+}
+.player-controls .library .lib-controls .filter {
+  position: relative;
+}
+.player-controls .library .lib-controls .filter .clear {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  border: none;
+  background: transparent;
 }
 .player-controls .library .lib-controls input[name=libFilter] {
   display: block;

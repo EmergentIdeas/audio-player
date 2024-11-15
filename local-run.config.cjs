@@ -1,4 +1,4 @@
-let appName = 'audio-player'
+let appName = 'audio-player-local'
 
 module.exports = {
 	/**

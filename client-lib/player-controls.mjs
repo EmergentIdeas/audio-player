@@ -113,12 +113,23 @@ export default class PlayControlsView extends View {
 			this.el.querySelector('.position-text').innerHTML = ' -- / --'
 		}
 
-		if(isSet(args.title)) {
-			this.el.querySelector('.track-title').innerHTML = args.title
+		if(isSet(args.track)) {
+			let track = args.track
+
+			let html = ` 
+				<div class="title">${track.name}</div>
+				`
+			if(track.artist) {
+				html += `<div class="artist">${track.artist.name}</div>`
+			}
+				
+			this.el.querySelector('.track-info').innerHTML = html
+		}
+		else if(isSet(args.title)) {
+			this.el.querySelector('.track-info').innerHTML = `<span class="track-title">${args.title}</span>`
 		}
 		else {
-			this.el.querySelector('.track-title').innerHTML = ''
-
+			this.el.querySelector('.track-info').innerHTML = ''
 		}
 	}
 	

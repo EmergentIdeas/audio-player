@@ -1020,7 +1020,7 @@ if (typeof __webpack_require__.g != 'undefined') {
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var tri = __webpack_require__(/*! tripartite */ "./node_modules/tripartite/tripartite.js"); var t = "<div class=\"player-controls lib-player\">\n\n\t<div class=\"library\">\n\t\t<div class=\"kalpa-tree\">\n\t\t<\/div>\n\t\t<div class=\"lib-controls\">\n\t\t\t<div class=\"filter\">\n\t\t\t\t<input name=\"libFilter\" type=\"text\" placeholder=\"search\" \/>\n\t\t\t<\/div>\n\t\t\t\n\t\t<\/div>\n\n\t\t<!-- <div class=\"drop-zone\">\n\t\t\tdrop files here\t\n\t\t<\/div> -->\n\t<\/div>\n\t<div class=\"selected-details\">\n\t\t\n\t<\/div>\n\t<div class=\"playside\">\n\t\t<div class=\"playlist-wrapper\">\n\t\t\t<div class=\"playlist webhandle-drag-sortable-list\">\n\t\t\t<\/div>\n\t\t\t<div class=\"playlist-bottom-buttons actions\">\n\t\t\t\t<div class=\"left\">\n\t\t\t\t\t<button class=\"previous\" title=\"previous track\">\n\t\t\t\t\t\t__::.\/previous-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\t\t\t\t<div class=\"right\">\n\t\t\t\t\t<button class=\"next\" title=\"next track\">\n\t\t\t\t\t\t__::.\/next-button__\n\t\t\t\t\t<\/button>\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t\t<div class=\"track-controls\">\n\t\t\t<div class=\"track-title\">\n\t\t\t<\/div>\n\t\t\t<div class=\"position\">\n\t\t\t\t<div class=\"play-pause actions\">\n\t\t\t\t\t<button class=\"play\" title=\"play \/ pause\">\n\t\t\t\t\t\t__::.\/play-pause-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\t\t\t\t<label>\n\t\t\t\t\t<input type=\"range\" name=\"position\" min=\"0\" max=\"1000\" value=\"0\" \/>\n\t\t\t\t<\/label>\n\t\t\t\t<div class=\"position-text\">\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"global-controls\">\n\t\t\t\t<div class=\"volume\">\n\t\t\t\t\t<label>\n\t\t\t\t\t\t<input type=\"range\" name=\"volume\" min=\"0\" max=\"100\" value=\"100\" \/>\n\t\t\t\t\t\tVolume\n\t\t\t\t\t<\/label>\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>\n\n<\/div>"; 
+var tri = __webpack_require__(/*! tripartite */ "./node_modules/tripartite/tripartite.js"); var t = "<div class=\"player-controls lib-player\">\n\n\t<div class=\"library\">\n\t\t<div class=\"kalpa-tree\">\n\t\t<\/div>\n\t\t<div class=\"lib-controls\">\n\t\t\t<div class=\"filter\">\n\t\t\t\t<input name=\"libFilter\" type=\"text\" placeholder=\"search\" \/>\n\t\t\t\t<button class=\"clear\" type=\"button\">&times;<\/button>\n\t\t\t<\/div>\n\n\t\t<\/div>\n\n\t\t<!-- <div class=\"drop-zone\">\n\t\t\tdrop files here\t\n\t\t<\/div> -->\n\t<\/div>\n\t<div class=\"selected-details\">\n\n\t<\/div>\n\t<div class=\"playside\">\n\t\t<div class=\"playlist-wrapper\">\n\t\t\t<div class=\"playlist webhandle-drag-sortable-list\">\n\t\t\t<\/div>\n\t\t\t<div class=\"playlist-bottom-buttons actions\">\n\t\t\t\t<div class=\"left\">\n\t\t\t\t\t<button class=\"previous\" title=\"previous track\">\n\t\t\t\t\t\t__::.\/previous-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\t\t\t\t<div class=\"right\">\n\t\t\t\t\t<button class=\"next\" title=\"next track\">\n\t\t\t\t\t\t__::.\/next-button__\n\t\t\t\t\t<\/button>\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t<\/div>\n\t\t<div class=\"play-controls\">\n\t\t\t<div class=\"volume\">\n\t\t\t\t<label>\n\t\t\t\t\t<input type=\"range\" name=\"volume\" min=\"0\" max=\"100\" value=\"100\" \/>\n\t\t\t\t\t<br>\n\n\t\t\t\t\t<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" height=\"24px\" viewBox=\"0 -960 960 960\" width=\"24px\"\n\t\t\t\t\t\tfill=\"#5f6368\">\n\t\t\t\t\t\t<path\n\t\t\t\t\t\t\td=\"M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z\" \/>\n\t\t\t\t\t<\/svg>\n\t\t\t\t<\/label>\n\t\t\t<\/div>\n\t\t\t<div class=\"track-info\">\n\t\t\t<\/div>\n\t\t\t<div class=\"position\">\n\t\t\t\t<label>\n\t\t\t\t\t<input type=\"range\" name=\"position\" min=\"0\" max=\"1000\" value=\"0\" \/>\n\t\t\t\t<\/label>\n\t\t\t\t<div class=\"position-text\">\n\n\t\t\t\t<\/div>\n\t\t\t<\/div>\n\t\t\t<div class=\"bottom-controls\">\n\t\t\t\t<div class=\"play-pause actions\">\n\t\t\t\t\t<button class=\"play\" title=\"play \/ pause\">\n\t\t\t\t\t\t__::.\/play-pause-button__\n\t\t\t\t\t<\/button>\n\t\t\t\t<\/div>\n\n\t\t\t<\/div>\n\t\t<\/div>\n\t<\/div>\n<\/div>\n\n<\/div>"; 
 module.exports = tri.addTemplate("dankolz/audio-player/controls", t); 
 
 /***/ }),
@@ -1080,6 +1080,26 @@ module.exports = tri.addTemplate("test2", t);
 
 /***/ }),
 
+/***/ "../media-library/node_modules/digits-only/index.js":
+/*!**********************************************************!*\
+  !*** ../media-library/node_modules/digits-only/index.js ***!
+  \**********************************************************/
+/***/ ((module) => {
+
+function digitsOnly(val) {
+	if (val) {
+		if(typeof val !== 'string') {
+			val = val.toString()
+		}
+		return val.replace(/[^0123456789]/g, '')
+	}
+	return ''
+}
+
+module.exports = digitsOnly
+
+/***/ }),
+
 /***/ "./client-js/index.js":
 /*!****************************!*\
   !*** ./client-js/index.js ***!
@@ -1114,80 +1134,6 @@ function stop() {
 
 /***/ }),
 
-/***/ "./client-lib/album.mjs":
-/*!******************************!*\
-  !*** ./client-lib/album.mjs ***!
-  \******************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Album: () => (/* binding */ Album)
-/* harmony export */ });
-class Album {
-	constructor(options) {
-		Object.assign(this, options)
-		this.tracks = []
-	}
-	
-	addTrack(track) {
-		this.tracks.push(track)
-	}
-}
-
-/***/ }),
-
-/***/ "./client-lib/artist.mjs":
-/*!*******************************!*\
-  !*** ./client-lib/artist.mjs ***!
-  \*******************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Artist: () => (/* binding */ Artist)
-/* harmony export */ });
-/* harmony import */ var _album_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./album.mjs */ "./client-lib/album.mjs");
-
-
-class Artist {
-	constructor(options) {
-		Object.assign(this, options)
-		this.albums = {}
-	}
-	
-	getAlbum(name) {
-		if(!name) {
-			name = ''
-		}
-		if(name in this.albums) {
-			return this.albums[name]
-		}
-		let album = new _album_mjs__WEBPACK_IMPORTED_MODULE_0__.Album({name: name})
-		this.albums[name] = album
-		return album
-	}
-	
-	getNamedAlbums() {
-		let albums = []
-		for(let key of Object.keys(this.albums)) {
-			if(key) {
-				albums.push(this.albums[key])
-			}
-		}
-		return albums
-	}
-	
-	getUnnamedAlbum() {
-		if('' in this.albums) {
-			return this.albums['']
-		}
-		return null
-	}
-}
-
-/***/ }),
-
 /***/ "./client-lib/library-view.mjs":
 /*!*************************************!*\
   !*** ./client-lib/library-view.mjs ***!
@@ -1202,7 +1148,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var kalpa_tree_on_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! kalpa-tree-on-page */ "./node_modules/kalpa-tree-on-page/client-js/kalpa-tree-loader.js");
 /* harmony import */ var _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @webhandle/minimal-browser-event-emitter */ "./node_modules/@webhandle/minimal-browser-event-emitter/client-js/index.js");
 /* harmony import */ var _webhandle_drag_sortable_list_client_lib_data_item_worker_mjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @webhandle/drag-sortable-list/client-lib/data-item-worker.mjs */ "./node_modules/@webhandle/drag-sortable-list/client-lib/data-item-worker.mjs");
-/* harmony import */ var _media_library_mjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./media-library.mjs */ "./client-lib/media-library.mjs");
+/* harmony import */ var _dankolz_media_library_lib_media_library_mjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @dankolz/media-library/lib/media-library.mjs */ "../media-library/lib/media-library.mjs");
 
 
 
@@ -1227,6 +1173,8 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 			, 'dragstart .kalpa-tree li.node': 'handleNodeDragStart'
 			, 'keydown input[name="libFilter"]': 'handleSearch'
 			, 'change input[name="libFilter"]': 'handleSearch'
+			, 'click .filter .clear': 'clearSearch'
+			, 'dblclick .kalpa-tree .node': 'nodeDoubleClick'
 			// , 'dragover .drop-zone': 'handleDropzoneDragover'
 			// , 'drop .drop-zone': 'handleDropzoneDrop'
 			// , 'dragover .kalpa-tree': 'handleDropzoneDragover'
@@ -1239,7 +1187,7 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		}
 		this.nodesEmitter = new _webhandle_minimal_browser_event_emitter__WEBPACK_IMPORTED_MODULE_2__["default"]()
 
-		this.mediaLibrary = new _media_library_mjs__WEBPACK_IMPORTED_MODULE_4__.MediaLibrary()
+		this.mediaLibrary = new _dankolz_media_library_lib_media_library_mjs__WEBPACK_IMPORTED_MODULE_4__["default"]()
 		this.uniquify = 1
 	}
 
@@ -1256,6 +1204,11 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		return parts.join('/')
 	}
 
+	clearSearch(evt, selected) {
+		let input = this.el.querySelector('input[name="libFilter"]')
+		input.value = ''
+		this.handleSearch(evt, input)
+	}
 
 	async handleNodeDragStart(evt, selected) {
 		let id = selected.getAttribute('data-id')
@@ -1270,15 +1223,17 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		this.emitter.emit('external-file-item-drag', {
 			action: 'external-file-item-drag'
 			, data: [dataNode].map(node => node.data)
+			, track: dataNode.track
+			, mediaMeta: dataNode.mediaMeta
 		})
 	}
 
 	handleSearch(evt, selected) {
-		// evt.preventDefault()
-		// evt.stopPropagation()
+		if(evt.key === 'Escape') {
+			selected.value = ''
+		}
 		setTimeout(() => {
 			this.tree.search(selected.value)
-
 		}, 1)
 	}
 	/**
@@ -1353,7 +1308,7 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		let parentId = 0
 		let newNodes = []
 		this.rerootTree()
-		for (let artist of this.mediaLibrary.getArtistSortedByName()) {
+		for (let artist of this.mediaLibrary.getArtistsSortedByName()) {
 			let artistNode = {
 				parentId: parentId
 				, id: counter++
@@ -1405,6 +1360,25 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		this.el.querySelector('input[name="libFilter"]').value = null
 
 	}
+	
+	nodeDoubleClick(evt, selected) {
+		let id = selected.getAttribute('data-id')
+		let dataNode = this.tree.get(id)
+		if(dataNode.track) {
+			this.emitter.emit('enqueue-command', {
+				type: 'enqueue-tracks-command'
+				, tracks: [dataNode.track]
+				, mediaMeta: [dataNode.mediaMeta]
+			})
+		}
+		else if(dataNode.file) {
+			this.emitter.emit('enqueue-command', {
+				type: 'enqueue-files-command',
+				files: [dataNode.file]
+			})
+		}
+
+	}
 
 	render() {
 		let view = this
@@ -1431,136 +1405,6 @@ class LibraryView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE_0__.
 		})
 
 	}
-
-}
-
-/***/ }),
-
-/***/ "./client-lib/media-library.mjs":
-/*!**************************************!*\
-  !*** ./client-lib/media-library.mjs ***!
-  \**************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   MediaLibrary: () => (/* binding */ MediaLibrary)
-/* harmony export */ });
-/* harmony import */ var _album_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./album.mjs */ "./client-lib/album.mjs");
-/* harmony import */ var _artist_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./artist.mjs */ "./client-lib/artist.mjs");
-/* harmony import */ var _track_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./track.mjs */ "./client-lib/track.mjs");
-
-
-
-
-class MediaLibrary {
-	constructor(options) {
-		Object.assign(this, options)
-		this.mediaItems = []
-		this.artists = {}
-	}
-
-	getArtist(name) {
-		let artist = this.artists[name]
-		if (!artist) {
-			artist = new _artist_mjs__WEBPACK_IMPORTED_MODULE_1__.Artist({
-				name: name
-			})
-			this.artists[name] = artist
-		}
-		return artist
-	}
-
-	getTreePathParts(path) {
-		let extExp = /(.*)(\..{3,4})$/i
-		let segments = path.match(extExp)
-		if (segments) {
-			path = segments[1]
-		}
-		let pathParts = path.split('/').filter(item => !!item)
-		let name = pathParts.pop()
-		let nameParts = name.split(' - ').filter(item => !!item).map(item => item.trim())
-
-		let pathInfo = {
-
-		}
-		if (nameParts.length == 4) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.album = nameParts[1]
-			pathInfo.trackNum = nameParts[2]
-			pathInfo.name = nameParts[3]
-		}
-		else if (nameParts.length == 3) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.album = nameParts[1]
-			pathInfo.name = nameParts[2]
-		}
-		else if (nameParts.length == 2) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.name = nameParts[1]
-		}
-		else if (nameParts.length > 4) {
-			pathInfo.artist = nameParts[0]
-			pathInfo.album = nameParts[1]
-			pathInfo.trackNum = nameParts[2]
-			pathInfo.name = nameParts[nameParts.length - 1]
-		}
-		else if (nameParts.length == 1) {
-			pathInfo.name = nameParts[0]
-
-			if (pathParts.length > 0) {
-				pathInfo.artist = pathParts[pathParts.length - 1]
-			}
-		}
-
-		if (!pathInfo.artist) {
-			pathInfo.artist = 'unknown'
-		}
-
-		if (!pathInfo.trackNum) {
-			pathInfo.trackNum = 0
-		}
-
-		if (!pathInfo.album) {
-			pathInfo.album = ''
-		}
-
-		return pathInfo
-	}
-
-	add(path, item) {
-		let treePath = this.getTreePathParts(path)
-		let artist = this.getArtist(treePath.artist)
-		let album = artist.getAlbum(treePath.album)
-
-		let track = new _track_mjs__WEBPACK_IMPORTED_MODULE_2__.Track({
-			name: treePath.name
-			, album: album
-			, artist: artist
-			, file: item
-			, data: item
-			, mediaMeta: treePath
-			, trackNum: treePath.trackNum
-		})
-
-		album.addTrack(track)
-	}
-	
-	getArtistSortedByName() {
-		let names = Object.keys(this.artists)
-		names.sort((one, two) => {
-			one = one.toLocaleLowerCase().trim()
-			two = two.toLocaleLowerCase().trim()
-			return one.localeCompare(two)
-		})
-		
-		let artists = []
-		for(let name of names) {
-			artists.push(this.artists[name])
-		}
-		return artists
-	}
-
 
 }
 
@@ -1695,12 +1539,23 @@ class PlayControlsView extends _webhandle_backbone_view__WEBPACK_IMPORTED_MODULE
 			this.el.querySelector('.position-text').innerHTML = ' -- / --'
 		}
 
-		if(isSet(args.title)) {
-			this.el.querySelector('.track-title').innerHTML = args.title
+		if(isSet(args.track)) {
+			let track = args.track
+
+			let html = ` 
+				<div class="title">${track.name}</div>
+				`
+			if(track.artist) {
+				html += `<div class="artist">${track.artist.name}</div>`
+			}
+				
+			this.el.querySelector('.track-info').innerHTML = html
+		}
+		else if(isSet(args.title)) {
+			this.el.querySelector('.track-info').innerHTML = `<span class="track-title">${args.title}</span>`
 		}
 		else {
-			this.el.querySelector('.track-title').innerHTML = ''
-
+			this.el.querySelector('.track-info').innerHTML = ''
 		}
 	}
 	
@@ -1795,6 +1650,7 @@ class Player {
 				, playState: this._getAudioState()
 				, currentItem: this.currentItem
 				, title: this.currentItem.querySelector('.title').innerText
+				, track: this.currentItem.track
 			}
 		}
 		else {
@@ -1874,7 +1730,7 @@ class Player {
 			}
 			this.currentItem = cell
 			if(cell.data) {
-				if(cell.data instanceof File) {
+				if(cell.data instanceof Blob) {
 					cell.objectUrl = this.playFile(cell.data)
 				}
 				else if(cell.data.__proto__.toString() == '[object FileEntry]') {
@@ -1888,7 +1744,6 @@ class Player {
 					this.audio.load()
 					this.audio.play()
 				}
-
 			}
 			this.emitStatus()
 		}
@@ -1958,7 +1813,20 @@ class PlaylistView extends _webhandle_drag_sortable_list__WEBPACK_IMPORTED_MODUL
 		this.events['click .remove'] = 'removeCell'
 		
 		this.emitter.on('external-file-item-drag', (evt) => {
-			this.externalDragData = evt.data
+			this.externalDragData = {
+				data: evt.data
+				, track: evt.track
+				, mediaMeta: evt.mediaMeta
+			}
+		})
+
+		this.emitter.on('enqueue-command', (evt) => {
+			if(evt.tracks && evt.tracks.length > 0) {
+				this.addTracksToQueue(evt.tracks)
+			}
+			else if(evt.files && evt.files.length > 0) {
+				this.addFilesToQueue(evt.files)
+			}
 		})
 	}
 	doubleClick(evt, selected) {
@@ -1995,13 +1863,22 @@ class PlaylistView extends _webhandle_drag_sortable_list__WEBPACK_IMPORTED_MODUL
 		return false
 	}
 	
+	getTrackEntries(evt) {
+		let mode
+		if (evt.dataTransfer) {
+			mode = evt.dataTransfer.getData('data:text/mode')
+		}
+		if(mode == 'external-drag' && this.externalDragData && this.externalDragData.track) {
+			return [this.externalDragData.track]
+		}
+	}
 	async getFilesEntries(evt) {
 		let mode
 		if (evt.dataTransfer) {
 			mode = evt.dataTransfer.getData('data:text/mode')
 		}
 		if(mode == 'external-drag' && this.externalDragData) {
-			let files = await dataItemWorker.expandEntries(this.externalDragData, {
+			let files = await dataItemWorker.expandEntries(this.externalDragData.data, {
 				keepDirectories: false
 				, recursive: true
 			})
@@ -2017,7 +1894,74 @@ class PlaylistView extends _webhandle_drag_sortable_list__WEBPACK_IMPORTED_MODUL
 
 		}
 	}
-
+	
+	addTracksToQueue(tracks) {
+		let cells = []
+		let changes = []
+		cells.push(...this.createCellsForTracks(tracks))
+		for (let cell of cells) {
+			this.addCell(cell, { })
+			changes.push({
+				cell: cell
+				, file: cell.file
+			})
+		}
+		this.emitter.emit('list-change', {
+			type: 'enqueue'
+			, cells: cells
+			, tracks: tracks
+			, files: tracks.map(track => track.file)
+			, changes: changes
+		})
+	}
+	
+	addFilesToQueue(files) {
+		let cells = []
+		let changes = []
+		cells.push(...this.createCellsForFiles(files))
+		for (let cell of cells) {
+			this.addCell(cell, { })
+			changes.push({
+				cell: cell
+				, file: cell.file
+			})
+		}
+		this.emitter.emit('list-change', {
+			type: 'enqueue'
+			, cells: cells
+			, files: files
+			, changes: changes
+		})
+	}
+	
+	/**
+	 * Creates permanent cells for files dropped into the list
+	 * @param {array} files 
+	 * @returns an array of Elements
+	 */
+	createCellsForTracks(tracks) {
+		let cells = tracks.map(track => {
+			let html = `<div class="cell">
+				<span class="handle">↕</span>
+				<span class="info">
+				<span class="title">${track.name}</span>
+				`
+			if(track.artist) {
+				html += `<span class="artist">${track.artist.name}</span>`
+			}
+				
+			html += `</span><span class="remove">&times</span>
+			</div>`
+			let el = this._makeElementFromHTML(html)
+			el.data = track.file
+			el.file = track.file
+			el.track = track
+			el.setAttribute('draggable', true)
+			return el
+		})
+		return cells
+	}
+	
 	/**
 	 * Creates permanent cells for files dropped into the list
 	 * @param {array} files 
@@ -2032,6 +1976,8 @@ class PlaylistView extends _webhandle_drag_sortable_list__WEBPACK_IMPORTED_MODUL
 			</div>`
 			let el = this._makeElementFromHTML(html)
 			el.data = file
+			el.file = file
+			el.setAttribute('draggable', true)
 			return el
 		})
 		return cells
@@ -2058,24 +2004,101 @@ class PlaylistView extends _webhandle_drag_sortable_list__WEBPACK_IMPORTED_MODUL
 		})
 		return cells
 	}
-}
+	/**
+	 * Creates permanent cells for external items dropped into the list,
+	 * emits events, and does cleaup
+	 * @param {Event} evt 
+	 * @param {Element} selected 
+	 */
+	handleDrop(evt, selected) {
+		evt.preventDefault()
+		
+		// Sometimes the placeholder gets cleaned up before the insertion of the new nodes
+		// happens. Let's capture the following element just in case we need it.
+		let afterDragElement
+		if(this.dragging) {
+			afterDragElement = this.dragging.nextElementSibling
+		}
 
-/***/ }),
+		let p = new Promise(async (resolve, reject) => {
+			if (this.isExternalDrop(evt)) {
+				// if a link is dropped, there's no exteralDrag object, just a drop object
+				let uriList
+				if (evt.dataTransfer) {
+					uriList = evt.dataTransfer.getData('text/uri-list')
+				}
 
-/***/ "./client-lib/track.mjs":
-/*!******************************!*\
-  !*** ./client-lib/track.mjs ***!
-  \******************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+				let changes = []
+				let tracks = this.getTrackEntries(evt)
+				let files = await this.getFilesEntries(evt)
+				let cells = []
+				if(tracks && tracks.length > 0) {
+					cells = this.createCellsForTracks(tracks)
+				}
+				else if (files && files.length > 0) {
+					cells = this.createCellsForFiles(files)
+					for (let count = 0; count < cells.length; count++) {
+						let cell = cells[count]
+						if (!cell.file) {
+							cell.file = files[count]
+						}
+					}
+				}
+				else if (uriList) {
+					if (typeof uriList == 'string') {
+						// Acording to the spec, this should be a list with one uri on every line
+						// In practice, it seems like the browser is eating the return characters
+						// In my tests, I'm passing multiple uris as comma separated. I'm handling
+						// both cases here.
+						let parts = [uriList]
+						for (let sep of ['\r\n', '\n', ',']) {
+							let newParts = []
+							for (let part of parts) {
+								newParts.push(...part.split(sep))
+							}
+							parts = newParts
+						}
+						uriList = parts
+					}
+					cells = this.createCellsForUriList(uriList)
+				}
+				else {
+					cells = this.createCellsForUnknownType(evt)
+				}
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Track: () => (/* binding */ Track)
-/* harmony export */ });
-class Track {
-	constructor(options) {
-		Object.assign(this, options)
+				for (let cell of cells) {
+					cell.setAttribute('draggable', true)
+					this.addCell(cell, {
+						before: this.dragging || afterDragElement
+					})
+					changes.push({
+						cell: cell
+						, file: cell.file
+					})
+				}
+				if (this.dragging) {
+					this.dragging.remove()
+				}
+				this.emitter.emit('list-change', {
+					type: 'drop'
+					, cells: cells
+					, files: files
+					, changes: changes
+					, event: evt
+				})
+			}
+			else {
+				this.emitter.emit('list-change', {
+					type: 'reorder'
+					, cells: [this.dragging]
+				})
+			}
+
+		})
+		this.cleanupDrag()
+		return p
 	}
+
 }
 
 /***/ }),
@@ -3384,6 +3407,556 @@ let test1 = _test1_tri__WEBPACK_IMPORTED_MODULE_0__
 let test2 = _test2_tri__WEBPACK_IMPORTED_MODULE_1__
 let playerControls = _dankolz_audio_player_controls_tri__WEBPACK_IMPORTED_MODULE_2__
 
+/***/ }),
+
+/***/ "../media-library/lib/album.mjs":
+/*!**************************************!*\
+  !*** ../media-library/lib/album.mjs ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Album: () => (/* binding */ Album)
+/* harmony export */ });
+class Album {
+	constructor(options) {
+		Object.assign(this, options)
+		this.tracks = []
+	}
+	
+	addTrack(track) {
+		this.tracks.push(track)
+	}
+}
+
+/***/ }),
+
+/***/ "../media-library/lib/artist.mjs":
+/*!***************************************!*\
+  !*** ../media-library/lib/artist.mjs ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Artist: () => (/* binding */ Artist)
+/* harmony export */ });
+/* harmony import */ var _album_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./album.mjs */ "../media-library/lib/album.mjs");
+
+
+class Artist {
+	constructor(options) {
+		Object.assign(this, options)
+		this.albums = {}
+	}
+	
+	getAlbum(name) {
+		if(!name) {
+			name = ''
+		}
+		if(name in this.albums) {
+			return this.albums[name]
+		}
+		let album = new _album_mjs__WEBPACK_IMPORTED_MODULE_0__.Album({name: name})
+		this.albums[name] = album
+		return album
+	}
+	
+	getNamedAlbums() {
+		let albums = []
+		for(let key of Object.keys(this.albums)) {
+			if(key) {
+				albums.push(this.albums[key])
+			}
+		}
+		return albums
+	}
+	
+	getUnnamedAlbum() {
+		if('' in this.albums) {
+			return this.albums['']
+		}
+		return null
+	}
+}
+
+/***/ }),
+
+/***/ "../media-library/lib/media-library.mjs":
+/*!**********************************************!*\
+  !*** ../media-library/lib/media-library.mjs ***!
+  \**********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ MediaLibrary)
+/* harmony export */ });
+/* harmony import */ var _artist_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./artist.mjs */ "../media-library/lib/artist.mjs");
+/* harmony import */ var _track_descriptor_by_path_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./track-descriptor-by-path.mjs */ "../media-library/lib/track-descriptor-by-path.mjs");
+/* harmony import */ var _track_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./track.mjs */ "../media-library/lib/track.mjs");
+
+
+
+
+class MediaLibrary {
+	
+	/**
+	 * 
+	 * @param {object} options 
+	 * @param {FileSink} options.sink
+	 */
+	constructor(options) {
+		Object.assign(this, options)
+		this.artists = []
+
+	}
+	
+	async getTracks(queryParameters) {
+		throw new Error('must implement')
+	}
+	async getAlbums(queryParameters) {
+		throw new Error('must implement')
+	}
+	async getArtists(queryParameters) {
+		throw new Error('must implement')
+	}
+	async save(queryParameters) {
+		throw new Error('must implement')
+	}
+
+	getArtist(name) {
+		let artist = this.artists[name]
+		if (!artist) {
+			artist = new _artist_mjs__WEBPACK_IMPORTED_MODULE_0__.Artist({
+				name: name
+			})
+			this.artists[name] = artist
+		}
+		return artist
+	}
+
+	add(path, item) {
+
+		let track
+		if(typeof path === 'string') {
+			track = (0,_track_descriptor_by_path_mjs__WEBPACK_IMPORTED_MODULE_1__["default"])(path)
+		}
+		else if(path instanceof _track_mjs__WEBPACK_IMPORTED_MODULE_2__.Track) {
+			track = path
+		}
+
+		let artist = this.getArtist(track.artist)
+		let album = artist.getAlbum(track.album)
+		
+		track.album = album
+		track.artist = artist
+		track.data = item
+		track.file = item
+
+		album.addTrack(track)
+	}
+
+	getArtistsSortedByName() {
+		let names = Object.keys(this.artists)
+		names.sort((one, two) => {
+			one = one.toLocaleLowerCase().trim()
+			two = two.toLocaleLowerCase().trim()
+			return one.localeCompare(two)
+		})
+		
+		let artists = []
+		for(let name of names) {
+			artists.push(this.artists[name])
+		}
+		return artists
+	}
+	
+}
+
+/***/ }),
+
+/***/ "../media-library/lib/track-descriptor-by-path.mjs":
+/*!*********************************************************!*\
+  !*** ../media-library/lib/track-descriptor-by-path.mjs ***!
+  \*********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ trackDescriptorByPath)
+/* harmony export */ });
+/* harmony import */ var digits_only__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! digits-only */ "../media-library/node_modules/digits-only/index.js");
+/* harmony import */ var _track_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./track.mjs */ "../media-library/lib/track.mjs");
+/* harmony import */ var mime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mime */ "../media-library/node_modules/mime/dist/src/index.js");
+
+// import { lookup } from "mime-types"
+
+
+
+
+
+/**
+ * Returns true if val contains non blank characters and all those chars are digits.
+ * @param {*} val 
+ * @returns 
+ */
+function isJustDigits(val) {
+	if(!val) {
+		return false
+	}
+	val = val.trim()
+	return digits_only__WEBPACK_IMPORTED_MODULE_0__(val) === val
+}
+
+/**
+ * Pad out val so that if it's less than two characters it starts with zeros
+ * @param {*} val 
+ * @returns 
+ */
+function twoDigitNumber(val) {
+	val = '' + val
+	return val.padStart(2, '0')
+}
+
+/**
+ * Looks at the name and determines if it's a number and if so, makes that the trackNum
+ * and gives it a new track name. 
+ * 
+ * @param {Object} pathInfo 
+ */
+function reorgForNumericName(pathInfo) {
+	if(isJustDigits(pathInfo.name)) {
+		pathInfo.trackNum = pathInfo.name
+		pathInfo.name = (pathInfo.album || pathInfo.artist || '')
+		if(pathInfo.name) {
+			pathInfo.name += ' '
+		}
+		pathInfo.name += 'Part ' + twoDigitNumber(pathInfo.trackNum)
+	}
+}
+
+/**
+ * Changes the track number to a be a js Number if it's not.
+ * @param {Object} pathInfo 
+ */
+function numerizeTrackNum(pathInfo) {
+	if(!Number.isInteger(pathInfo.trackNum)) {
+		pathInfo.trackNum = parseInt(pathInfo.trackNum)
+		if(Number.isNaN(pathInfo.trackNum)) {
+			pathInfo.trackNum = 0
+		}
+	}
+}
+
+/**
+ * Takes a file path and attempts to figure out the name, artist, album, and track number.
+ * 
+ * Assumes a track name looks like:
+ * 
+ * artist - album - trackNum - name.ext
+ * artist - album - name.ext
+ * artist - name.ext
+ * name.ext
+ * artist/album/name.ext
+ * artist/name.ext
+ * 
+ * Precedence is always given to the file name. So if the path looks like
+ * 
+ * artistb/artista - album - trackNum - name.ext
+ * 
+ * this function will think the artist is 'artista'.
+ * 
+ * A special case is:
+ * albumOrArtist - 01.ext
+ * 
+ * In this case, since the name of the track is a number, it assumes that the track is actually something like
+ * {album: 'albumOrArtist', trackNum: 1, name: 'albumOrArtist Part 01'}
+ * 
+ * 
+ * If the file name does NOT contain a separator like ' - ' but does contain a '-', it will treat dashes as separators
+ * instead of characters within words.
+ * 
+ * 
+ *  
+ * @param {string} path The path of the file
+ * @param {Object} options
+ * @param {boolean} options.probablyAudiobook If true, it views the the files in a folder to be members of a single work (album)
+ * rather than as individual works by an artist.
+ * @returns 
+ */
+function trackDescriptorByPath(path, {probablyAudiobook = false} = {}) {
+	let extExp = /(.*)(\.(.{3,4}))$/i
+	let segments = path.match(extExp)
+	let ext
+	if (segments) {
+		path = segments[1]
+		ext = segments[2]
+	}
+
+	let pathParts = path.split('/').filter(item => !!item)
+	let name = pathParts.pop()
+	let nameParts = name.split(' - ').filter(item => !!item).map(item => item.trim())
+	if(nameParts.length == 1 && name.indexOf('-') > -1) {
+		// In this case, it looks like maybe the file is - seperated, but they didn't use spaces
+		nameParts = name.split('-').filter(item => !!item).map(item => item.trim())
+	}
+
+	let track = new _track_mjs__WEBPACK_IMPORTED_MODULE_1__.Track()
+	
+	if (nameParts.length == 4) {
+		track.artist = nameParts[0]
+		track.album = nameParts[1]
+		track.trackNum = nameParts[2]
+		track.name = nameParts[3]
+	}
+	else if (nameParts.length == 3) {
+		track.artist = nameParts[0]
+		track.album = nameParts[1]
+		track.name = nameParts[2]
+		reorgForNumericName(track)
+	}
+	else if (nameParts.length == 2) {
+		if(probablyAudiobook) {
+			track.album = nameParts[0]
+			track.name = nameParts[1]
+		}
+		else {
+			track.artist = nameParts[0]
+			track.name = nameParts[1]
+		}
+		reorgForNumericName(track)
+	}
+	else if (nameParts.length > 4) {
+		track.artist = nameParts[0]
+		track.album = nameParts[1]
+		track.trackNum = nameParts[2]
+		track.name = nameParts[nameParts.length - 1]
+	}
+	else if (nameParts.length == 1) {
+		track.name = nameParts[0]
+	}
+	
+	if (!track.trackNum) {
+		track.trackNum = 0
+	}
+
+	if(pathParts.length == 2) {
+		if(!track.artist) {
+			track.artist = pathParts[0]
+		}
+		if(!track.album) {
+			track.album = pathParts[1]
+		}
+	}
+
+	if(pathParts.length == 1) {
+		if(probablyAudiobook) {
+			if(!track.album) {
+				track.album = pathParts[0]
+			}
+		}
+		else {
+			if(!track.artist) {
+				track.artist = pathParts[0]
+			}
+		}
+	}
+	
+	if(ext) {
+		while(ext.startsWith('.')) {
+			ext = ext.substring(1)
+		}
+		track.ext = ext
+	}
+	
+	numerizeTrackNum(track)
+	
+	if(track.ext) {
+		track.mediaType = mime__WEBPACK_IMPORTED_MODULE_2__["default"].getType(track.ext)
+	}
+
+	return track
+}
+
+
+
+/***/ }),
+
+/***/ "../media-library/lib/track.mjs":
+/*!**************************************!*\
+  !*** ../media-library/lib/track.mjs ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Track: () => (/* binding */ Track)
+/* harmony export */ });
+
+class Track {
+	constructor(options) {
+		Object.assign(this, options)
+	}
+	
+}
+
+/***/ }),
+
+/***/ "../media-library/node_modules/mime/dist/src/Mime.js":
+/*!***********************************************************!*\
+  !*** ../media-library/node_modules/mime/dist/src/Mime.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var __classPrivateFieldGet = (undefined && undefined.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var _Mime_extensionToType, _Mime_typeToExtension, _Mime_typeToExtensions;
+class Mime {
+    constructor(...args) {
+        _Mime_extensionToType.set(this, new Map());
+        _Mime_typeToExtension.set(this, new Map());
+        _Mime_typeToExtensions.set(this, new Map());
+        for (const arg of args) {
+            this.define(arg);
+        }
+    }
+    define(typeMap, force = false) {
+        for (let [type, extensions] of Object.entries(typeMap)) {
+            type = type.toLowerCase();
+            extensions = extensions.map((ext) => ext.toLowerCase());
+            if (!__classPrivateFieldGet(this, _Mime_typeToExtensions, "f").has(type)) {
+                __classPrivateFieldGet(this, _Mime_typeToExtensions, "f").set(type, new Set());
+            }
+            const allExtensions = __classPrivateFieldGet(this, _Mime_typeToExtensions, "f").get(type);
+            let first = true;
+            for (let extension of extensions) {
+                const starred = extension.startsWith('*');
+                extension = starred ? extension.slice(1) : extension;
+                allExtensions?.add(extension);
+                if (first) {
+                    __classPrivateFieldGet(this, _Mime_typeToExtension, "f").set(type, extension);
+                }
+                first = false;
+                if (starred)
+                    continue;
+                const currentType = __classPrivateFieldGet(this, _Mime_extensionToType, "f").get(extension);
+                if (currentType && currentType != type && !force) {
+                    throw new Error(`"${type} -> ${extension}" conflicts with "${currentType} -> ${extension}". Pass \`force=true\` to override this definition.`);
+                }
+                __classPrivateFieldGet(this, _Mime_extensionToType, "f").set(extension, type);
+            }
+        }
+        return this;
+    }
+    getType(path) {
+        if (typeof path !== 'string')
+            return null;
+        const last = path.replace(/^.*[/\\]/, '').toLowerCase();
+        const ext = last.replace(/^.*\./, '').toLowerCase();
+        const hasPath = last.length < path.length;
+        const hasDot = ext.length < last.length - 1;
+        if (!hasDot && hasPath)
+            return null;
+        return __classPrivateFieldGet(this, _Mime_extensionToType, "f").get(ext) ?? null;
+    }
+    getExtension(type) {
+        if (typeof type !== 'string')
+            return null;
+        type = type?.split?.(';')[0];
+        return ((type && __classPrivateFieldGet(this, _Mime_typeToExtension, "f").get(type.trim().toLowerCase())) ?? null);
+    }
+    getAllExtensions(type) {
+        if (typeof type !== 'string')
+            return null;
+        return __classPrivateFieldGet(this, _Mime_typeToExtensions, "f").get(type.toLowerCase()) ?? null;
+    }
+    _freeze() {
+        this.define = () => {
+            throw new Error('define() not allowed for built-in Mime objects. See https://github.com/broofa/mime/blob/main/README.md#custom-mime-instances');
+        };
+        Object.freeze(this);
+        for (const extensions of __classPrivateFieldGet(this, _Mime_typeToExtensions, "f").values()) {
+            Object.freeze(extensions);
+        }
+        return this;
+    }
+    _getTestState() {
+        return {
+            types: __classPrivateFieldGet(this, _Mime_extensionToType, "f"),
+            extensions: __classPrivateFieldGet(this, _Mime_typeToExtension, "f"),
+        };
+    }
+}
+_Mime_extensionToType = new WeakMap(), _Mime_typeToExtension = new WeakMap(), _Mime_typeToExtensions = new WeakMap();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Mime);
+//# sourceMappingURL=Mime.js.map
+
+/***/ }),
+
+/***/ "../media-library/node_modules/mime/dist/src/index.js":
+/*!************************************************************!*\
+  !*** ../media-library/node_modules/mime/dist/src/index.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Mime: () => (/* reexport safe */ _Mime_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _types_other_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../types/other.js */ "../media-library/node_modules/mime/dist/types/other.js");
+/* harmony import */ var _types_standard_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../types/standard.js */ "../media-library/node_modules/mime/dist/types/standard.js");
+/* harmony import */ var _Mime_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Mime.js */ "../media-library/node_modules/mime/dist/src/Mime.js");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new _Mime_js__WEBPACK_IMPORTED_MODULE_2__["default"](_types_standard_js__WEBPACK_IMPORTED_MODULE_1__["default"], _types_other_js__WEBPACK_IMPORTED_MODULE_0__["default"])._freeze());
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../media-library/node_modules/mime/dist/types/other.js":
+/*!**************************************************************!*\
+  !*** ../media-library/node_modules/mime/dist/types/other.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const types = { "application/prs.cww": ["cww"], "application/prs.xsf+xml": ["xsf"], "application/vnd.1000minds.decision-model+xml": ["1km"], "application/vnd.3gpp.pic-bw-large": ["plb"], "application/vnd.3gpp.pic-bw-small": ["psb"], "application/vnd.3gpp.pic-bw-var": ["pvb"], "application/vnd.3gpp2.tcap": ["tcap"], "application/vnd.3m.post-it-notes": ["pwn"], "application/vnd.accpac.simply.aso": ["aso"], "application/vnd.accpac.simply.imp": ["imp"], "application/vnd.acucobol": ["acu"], "application/vnd.acucorp": ["atc", "acutc"], "application/vnd.adobe.air-application-installer-package+zip": ["air"], "application/vnd.adobe.formscentral.fcdt": ["fcdt"], "application/vnd.adobe.fxp": ["fxp", "fxpl"], "application/vnd.adobe.xdp+xml": ["xdp"], "application/vnd.adobe.xfdf": ["*xfdf"], "application/vnd.age": ["age"], "application/vnd.ahead.space": ["ahead"], "application/vnd.airzip.filesecure.azf": ["azf"], "application/vnd.airzip.filesecure.azs": ["azs"], "application/vnd.amazon.ebook": ["azw"], "application/vnd.americandynamics.acc": ["acc"], "application/vnd.amiga.ami": ["ami"], "application/vnd.android.package-archive": ["apk"], "application/vnd.anser-web-certificate-issue-initiation": ["cii"], "application/vnd.anser-web-funds-transfer-initiation": ["fti"], "application/vnd.antix.game-component": ["atx"], "application/vnd.apple.installer+xml": ["mpkg"], "application/vnd.apple.keynote": ["key"], "application/vnd.apple.mpegurl": ["m3u8"], "application/vnd.apple.numbers": ["numbers"], "application/vnd.apple.pages": ["pages"], "application/vnd.apple.pkpass": ["pkpass"], "application/vnd.aristanetworks.swi": ["swi"], "application/vnd.astraea-software.iota": ["iota"], "application/vnd.audiograph": ["aep"], "application/vnd.balsamiq.bmml+xml": ["bmml"], "application/vnd.blueice.multipass": ["mpm"], "application/vnd.bmi": ["bmi"], "application/vnd.businessobjects": ["rep"], "application/vnd.chemdraw+xml": ["cdxml"], "application/vnd.chipnuts.karaoke-mmd": ["mmd"], "application/vnd.cinderella": ["cdy"], "application/vnd.citationstyles.style+xml": ["csl"], "application/vnd.claymore": ["cla"], "application/vnd.cloanto.rp9": ["rp9"], "application/vnd.clonk.c4group": ["c4g", "c4d", "c4f", "c4p", "c4u"], "application/vnd.cluetrust.cartomobile-config": ["c11amc"], "application/vnd.cluetrust.cartomobile-config-pkg": ["c11amz"], "application/vnd.commonspace": ["csp"], "application/vnd.contact.cmsg": ["cdbcmsg"], "application/vnd.cosmocaller": ["cmc"], "application/vnd.crick.clicker": ["clkx"], "application/vnd.crick.clicker.keyboard": ["clkk"], "application/vnd.crick.clicker.palette": ["clkp"], "application/vnd.crick.clicker.template": ["clkt"], "application/vnd.crick.clicker.wordbank": ["clkw"], "application/vnd.criticaltools.wbs+xml": ["wbs"], "application/vnd.ctc-posml": ["pml"], "application/vnd.cups-ppd": ["ppd"], "application/vnd.curl.car": ["car"], "application/vnd.curl.pcurl": ["pcurl"], "application/vnd.dart": ["dart"], "application/vnd.data-vision.rdz": ["rdz"], "application/vnd.dbf": ["dbf"], "application/vnd.dece.data": ["uvf", "uvvf", "uvd", "uvvd"], "application/vnd.dece.ttml+xml": ["uvt", "uvvt"], "application/vnd.dece.unspecified": ["uvx", "uvvx"], "application/vnd.dece.zip": ["uvz", "uvvz"], "application/vnd.denovo.fcselayout-link": ["fe_launch"], "application/vnd.dna": ["dna"], "application/vnd.dolby.mlp": ["mlp"], "application/vnd.dpgraph": ["dpg"], "application/vnd.dreamfactory": ["dfac"], "application/vnd.ds-keypoint": ["kpxx"], "application/vnd.dvb.ait": ["ait"], "application/vnd.dvb.service": ["svc"], "application/vnd.dynageo": ["geo"], "application/vnd.ecowin.chart": ["mag"], "application/vnd.enliven": ["nml"], "application/vnd.epson.esf": ["esf"], "application/vnd.epson.msf": ["msf"], "application/vnd.epson.quickanime": ["qam"], "application/vnd.epson.salt": ["slt"], "application/vnd.epson.ssf": ["ssf"], "application/vnd.eszigno3+xml": ["es3", "et3"], "application/vnd.ezpix-album": ["ez2"], "application/vnd.ezpix-package": ["ez3"], "application/vnd.fdf": ["*fdf"], "application/vnd.fdsn.mseed": ["mseed"], "application/vnd.fdsn.seed": ["seed", "dataless"], "application/vnd.flographit": ["gph"], "application/vnd.fluxtime.clip": ["ftc"], "application/vnd.framemaker": ["fm", "frame", "maker", "book"], "application/vnd.frogans.fnc": ["fnc"], "application/vnd.frogans.ltf": ["ltf"], "application/vnd.fsc.weblaunch": ["fsc"], "application/vnd.fujitsu.oasys": ["oas"], "application/vnd.fujitsu.oasys2": ["oa2"], "application/vnd.fujitsu.oasys3": ["oa3"], "application/vnd.fujitsu.oasysgp": ["fg5"], "application/vnd.fujitsu.oasysprs": ["bh2"], "application/vnd.fujixerox.ddd": ["ddd"], "application/vnd.fujixerox.docuworks": ["xdw"], "application/vnd.fujixerox.docuworks.binder": ["xbd"], "application/vnd.fuzzysheet": ["fzs"], "application/vnd.genomatix.tuxedo": ["txd"], "application/vnd.geogebra.file": ["ggb"], "application/vnd.geogebra.tool": ["ggt"], "application/vnd.geometry-explorer": ["gex", "gre"], "application/vnd.geonext": ["gxt"], "application/vnd.geoplan": ["g2w"], "application/vnd.geospace": ["g3w"], "application/vnd.gmx": ["gmx"], "application/vnd.google-apps.document": ["gdoc"], "application/vnd.google-apps.presentation": ["gslides"], "application/vnd.google-apps.spreadsheet": ["gsheet"], "application/vnd.google-earth.kml+xml": ["kml"], "application/vnd.google-earth.kmz": ["kmz"], "application/vnd.grafeq": ["gqf", "gqs"], "application/vnd.groove-account": ["gac"], "application/vnd.groove-help": ["ghf"], "application/vnd.groove-identity-message": ["gim"], "application/vnd.groove-injector": ["grv"], "application/vnd.groove-tool-message": ["gtm"], "application/vnd.groove-tool-template": ["tpl"], "application/vnd.groove-vcard": ["vcg"], "application/vnd.hal+xml": ["hal"], "application/vnd.handheld-entertainment+xml": ["zmm"], "application/vnd.hbci": ["hbci"], "application/vnd.hhe.lesson-player": ["les"], "application/vnd.hp-hpgl": ["hpgl"], "application/vnd.hp-hpid": ["hpid"], "application/vnd.hp-hps": ["hps"], "application/vnd.hp-jlyt": ["jlt"], "application/vnd.hp-pcl": ["pcl"], "application/vnd.hp-pclxl": ["pclxl"], "application/vnd.hydrostatix.sof-data": ["sfd-hdstx"], "application/vnd.ibm.minipay": ["mpy"], "application/vnd.ibm.modcap": ["afp", "listafp", "list3820"], "application/vnd.ibm.rights-management": ["irm"], "application/vnd.ibm.secure-container": ["sc"], "application/vnd.iccprofile": ["icc", "icm"], "application/vnd.igloader": ["igl"], "application/vnd.immervision-ivp": ["ivp"], "application/vnd.immervision-ivu": ["ivu"], "application/vnd.insors.igm": ["igm"], "application/vnd.intercon.formnet": ["xpw", "xpx"], "application/vnd.intergeo": ["i2g"], "application/vnd.intu.qbo": ["qbo"], "application/vnd.intu.qfx": ["qfx"], "application/vnd.ipunplugged.rcprofile": ["rcprofile"], "application/vnd.irepository.package+xml": ["irp"], "application/vnd.is-xpr": ["xpr"], "application/vnd.isac.fcs": ["fcs"], "application/vnd.jam": ["jam"], "application/vnd.jcp.javame.midlet-rms": ["rms"], "application/vnd.jisp": ["jisp"], "application/vnd.joost.joda-archive": ["joda"], "application/vnd.kahootz": ["ktz", "ktr"], "application/vnd.kde.karbon": ["karbon"], "application/vnd.kde.kchart": ["chrt"], "application/vnd.kde.kformula": ["kfo"], "application/vnd.kde.kivio": ["flw"], "application/vnd.kde.kontour": ["kon"], "application/vnd.kde.kpresenter": ["kpr", "kpt"], "application/vnd.kde.kspread": ["ksp"], "application/vnd.kde.kword": ["kwd", "kwt"], "application/vnd.kenameaapp": ["htke"], "application/vnd.kidspiration": ["kia"], "application/vnd.kinar": ["kne", "knp"], "application/vnd.koan": ["skp", "skd", "skt", "skm"], "application/vnd.kodak-descriptor": ["sse"], "application/vnd.las.las+xml": ["lasxml"], "application/vnd.llamagraphics.life-balance.desktop": ["lbd"], "application/vnd.llamagraphics.life-balance.exchange+xml": ["lbe"], "application/vnd.lotus-1-2-3": ["123"], "application/vnd.lotus-approach": ["apr"], "application/vnd.lotus-freelance": ["pre"], "application/vnd.lotus-notes": ["nsf"], "application/vnd.lotus-organizer": ["org"], "application/vnd.lotus-screencam": ["scm"], "application/vnd.lotus-wordpro": ["lwp"], "application/vnd.macports.portpkg": ["portpkg"], "application/vnd.mapbox-vector-tile": ["mvt"], "application/vnd.mcd": ["mcd"], "application/vnd.medcalcdata": ["mc1"], "application/vnd.mediastation.cdkey": ["cdkey"], "application/vnd.mfer": ["mwf"], "application/vnd.mfmp": ["mfm"], "application/vnd.micrografx.flo": ["flo"], "application/vnd.micrografx.igx": ["igx"], "application/vnd.mif": ["mif"], "application/vnd.mobius.daf": ["daf"], "application/vnd.mobius.dis": ["dis"], "application/vnd.mobius.mbk": ["mbk"], "application/vnd.mobius.mqy": ["mqy"], "application/vnd.mobius.msl": ["msl"], "application/vnd.mobius.plc": ["plc"], "application/vnd.mobius.txf": ["txf"], "application/vnd.mophun.application": ["mpn"], "application/vnd.mophun.certificate": ["mpc"], "application/vnd.mozilla.xul+xml": ["xul"], "application/vnd.ms-artgalry": ["cil"], "application/vnd.ms-cab-compressed": ["cab"], "application/vnd.ms-excel": ["xls", "xlm", "xla", "xlc", "xlt", "xlw"], "application/vnd.ms-excel.addin.macroenabled.12": ["xlam"], "application/vnd.ms-excel.sheet.binary.macroenabled.12": ["xlsb"], "application/vnd.ms-excel.sheet.macroenabled.12": ["xlsm"], "application/vnd.ms-excel.template.macroenabled.12": ["xltm"], "application/vnd.ms-fontobject": ["eot"], "application/vnd.ms-htmlhelp": ["chm"], "application/vnd.ms-ims": ["ims"], "application/vnd.ms-lrm": ["lrm"], "application/vnd.ms-officetheme": ["thmx"], "application/vnd.ms-outlook": ["msg"], "application/vnd.ms-pki.seccat": ["cat"], "application/vnd.ms-pki.stl": ["*stl"], "application/vnd.ms-powerpoint": ["ppt", "pps", "pot"], "application/vnd.ms-powerpoint.addin.macroenabled.12": ["ppam"], "application/vnd.ms-powerpoint.presentation.macroenabled.12": ["pptm"], "application/vnd.ms-powerpoint.slide.macroenabled.12": ["sldm"], "application/vnd.ms-powerpoint.slideshow.macroenabled.12": ["ppsm"], "application/vnd.ms-powerpoint.template.macroenabled.12": ["potm"], "application/vnd.ms-project": ["*mpp", "mpt"], "application/vnd.ms-word.document.macroenabled.12": ["docm"], "application/vnd.ms-word.template.macroenabled.12": ["dotm"], "application/vnd.ms-works": ["wps", "wks", "wcm", "wdb"], "application/vnd.ms-wpl": ["wpl"], "application/vnd.ms-xpsdocument": ["xps"], "application/vnd.mseq": ["mseq"], "application/vnd.musician": ["mus"], "application/vnd.muvee.style": ["msty"], "application/vnd.mynfc": ["taglet"], "application/vnd.neurolanguage.nlu": ["nlu"], "application/vnd.nitf": ["ntf", "nitf"], "application/vnd.noblenet-directory": ["nnd"], "application/vnd.noblenet-sealer": ["nns"], "application/vnd.noblenet-web": ["nnw"], "application/vnd.nokia.n-gage.ac+xml": ["*ac"], "application/vnd.nokia.n-gage.data": ["ngdat"], "application/vnd.nokia.n-gage.symbian.install": ["n-gage"], "application/vnd.nokia.radio-preset": ["rpst"], "application/vnd.nokia.radio-presets": ["rpss"], "application/vnd.novadigm.edm": ["edm"], "application/vnd.novadigm.edx": ["edx"], "application/vnd.novadigm.ext": ["ext"], "application/vnd.oasis.opendocument.chart": ["odc"], "application/vnd.oasis.opendocument.chart-template": ["otc"], "application/vnd.oasis.opendocument.database": ["odb"], "application/vnd.oasis.opendocument.formula": ["odf"], "application/vnd.oasis.opendocument.formula-template": ["odft"], "application/vnd.oasis.opendocument.graphics": ["odg"], "application/vnd.oasis.opendocument.graphics-template": ["otg"], "application/vnd.oasis.opendocument.image": ["odi"], "application/vnd.oasis.opendocument.image-template": ["oti"], "application/vnd.oasis.opendocument.presentation": ["odp"], "application/vnd.oasis.opendocument.presentation-template": ["otp"], "application/vnd.oasis.opendocument.spreadsheet": ["ods"], "application/vnd.oasis.opendocument.spreadsheet-template": ["ots"], "application/vnd.oasis.opendocument.text": ["odt"], "application/vnd.oasis.opendocument.text-master": ["odm"], "application/vnd.oasis.opendocument.text-template": ["ott"], "application/vnd.oasis.opendocument.text-web": ["oth"], "application/vnd.olpc-sugar": ["xo"], "application/vnd.oma.dd2+xml": ["dd2"], "application/vnd.openblox.game+xml": ["obgx"], "application/vnd.openofficeorg.extension": ["oxt"], "application/vnd.openstreetmap.data+xml": ["osm"], "application/vnd.openxmlformats-officedocument.presentationml.presentation": ["pptx"], "application/vnd.openxmlformats-officedocument.presentationml.slide": ["sldx"], "application/vnd.openxmlformats-officedocument.presentationml.slideshow": ["ppsx"], "application/vnd.openxmlformats-officedocument.presentationml.template": ["potx"], "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": ["xlsx"], "application/vnd.openxmlformats-officedocument.spreadsheetml.template": ["xltx"], "application/vnd.openxmlformats-officedocument.wordprocessingml.document": ["docx"], "application/vnd.openxmlformats-officedocument.wordprocessingml.template": ["dotx"], "application/vnd.osgeo.mapguide.package": ["mgp"], "application/vnd.osgi.dp": ["dp"], "application/vnd.osgi.subsystem": ["esa"], "application/vnd.palm": ["pdb", "pqa", "oprc"], "application/vnd.pawaafile": ["paw"], "application/vnd.pg.format": ["str"], "application/vnd.pg.osasli": ["ei6"], "application/vnd.picsel": ["efif"], "application/vnd.pmi.widget": ["wg"], "application/vnd.pocketlearn": ["plf"], "application/vnd.powerbuilder6": ["pbd"], "application/vnd.previewsystems.box": ["box"], "application/vnd.proteus.magazine": ["mgz"], "application/vnd.publishare-delta-tree": ["qps"], "application/vnd.pvi.ptid1": ["ptid"], "application/vnd.pwg-xhtml-print+xml": ["xhtm"], "application/vnd.quark.quarkxpress": ["qxd", "qxt", "qwd", "qwt", "qxl", "qxb"], "application/vnd.rar": ["rar"], "application/vnd.realvnc.bed": ["bed"], "application/vnd.recordare.musicxml": ["mxl"], "application/vnd.recordare.musicxml+xml": ["musicxml"], "application/vnd.rig.cryptonote": ["cryptonote"], "application/vnd.rim.cod": ["cod"], "application/vnd.rn-realmedia": ["rm"], "application/vnd.rn-realmedia-vbr": ["rmvb"], "application/vnd.route66.link66+xml": ["link66"], "application/vnd.sailingtracker.track": ["st"], "application/vnd.seemail": ["see"], "application/vnd.sema": ["sema"], "application/vnd.semd": ["semd"], "application/vnd.semf": ["semf"], "application/vnd.shana.informed.formdata": ["ifm"], "application/vnd.shana.informed.formtemplate": ["itp"], "application/vnd.shana.informed.interchange": ["iif"], "application/vnd.shana.informed.package": ["ipk"], "application/vnd.simtech-mindmapper": ["twd", "twds"], "application/vnd.smaf": ["mmf"], "application/vnd.smart.teacher": ["teacher"], "application/vnd.software602.filler.form+xml": ["fo"], "application/vnd.solent.sdkm+xml": ["sdkm", "sdkd"], "application/vnd.spotfire.dxp": ["dxp"], "application/vnd.spotfire.sfs": ["sfs"], "application/vnd.stardivision.calc": ["sdc"], "application/vnd.stardivision.draw": ["sda"], "application/vnd.stardivision.impress": ["sdd"], "application/vnd.stardivision.math": ["smf"], "application/vnd.stardivision.writer": ["sdw", "vor"], "application/vnd.stardivision.writer-global": ["sgl"], "application/vnd.stepmania.package": ["smzip"], "application/vnd.stepmania.stepchart": ["sm"], "application/vnd.sun.wadl+xml": ["wadl"], "application/vnd.sun.xml.calc": ["sxc"], "application/vnd.sun.xml.calc.template": ["stc"], "application/vnd.sun.xml.draw": ["sxd"], "application/vnd.sun.xml.draw.template": ["std"], "application/vnd.sun.xml.impress": ["sxi"], "application/vnd.sun.xml.impress.template": ["sti"], "application/vnd.sun.xml.math": ["sxm"], "application/vnd.sun.xml.writer": ["sxw"], "application/vnd.sun.xml.writer.global": ["sxg"], "application/vnd.sun.xml.writer.template": ["stw"], "application/vnd.sus-calendar": ["sus", "susp"], "application/vnd.svd": ["svd"], "application/vnd.symbian.install": ["sis", "sisx"], "application/vnd.syncml+xml": ["xsm"], "application/vnd.syncml.dm+wbxml": ["bdm"], "application/vnd.syncml.dm+xml": ["xdm"], "application/vnd.syncml.dmddf+xml": ["ddf"], "application/vnd.tao.intent-module-archive": ["tao"], "application/vnd.tcpdump.pcap": ["pcap", "cap", "dmp"], "application/vnd.tmobile-livetv": ["tmo"], "application/vnd.trid.tpt": ["tpt"], "application/vnd.triscape.mxs": ["mxs"], "application/vnd.trueapp": ["tra"], "application/vnd.ufdl": ["ufd", "ufdl"], "application/vnd.uiq.theme": ["utz"], "application/vnd.umajin": ["umj"], "application/vnd.unity": ["unityweb"], "application/vnd.uoml+xml": ["uoml", "uo"], "application/vnd.vcx": ["vcx"], "application/vnd.visio": ["vsd", "vst", "vss", "vsw"], "application/vnd.visionary": ["vis"], "application/vnd.vsf": ["vsf"], "application/vnd.wap.wbxml": ["wbxml"], "application/vnd.wap.wmlc": ["wmlc"], "application/vnd.wap.wmlscriptc": ["wmlsc"], "application/vnd.webturbo": ["wtb"], "application/vnd.wolfram.player": ["nbp"], "application/vnd.wordperfect": ["wpd"], "application/vnd.wqd": ["wqd"], "application/vnd.wt.stf": ["stf"], "application/vnd.xara": ["xar"], "application/vnd.xfdl": ["xfdl"], "application/vnd.yamaha.hv-dic": ["hvd"], "application/vnd.yamaha.hv-script": ["hvs"], "application/vnd.yamaha.hv-voice": ["hvp"], "application/vnd.yamaha.openscoreformat": ["osf"], "application/vnd.yamaha.openscoreformat.osfpvg+xml": ["osfpvg"], "application/vnd.yamaha.smaf-audio": ["saf"], "application/vnd.yamaha.smaf-phrase": ["spf"], "application/vnd.yellowriver-custom-menu": ["cmp"], "application/vnd.zul": ["zir", "zirz"], "application/vnd.zzazz.deck+xml": ["zaz"], "application/x-7z-compressed": ["7z"], "application/x-abiword": ["abw"], "application/x-ace-compressed": ["ace"], "application/x-apple-diskimage": ["*dmg"], "application/x-arj": ["arj"], "application/x-authorware-bin": ["aab", "x32", "u32", "vox"], "application/x-authorware-map": ["aam"], "application/x-authorware-seg": ["aas"], "application/x-bcpio": ["bcpio"], "application/x-bdoc": ["*bdoc"], "application/x-bittorrent": ["torrent"], "application/x-blorb": ["blb", "blorb"], "application/x-bzip": ["bz"], "application/x-bzip2": ["bz2", "boz"], "application/x-cbr": ["cbr", "cba", "cbt", "cbz", "cb7"], "application/x-cdlink": ["vcd"], "application/x-cfs-compressed": ["cfs"], "application/x-chat": ["chat"], "application/x-chess-pgn": ["pgn"], "application/x-chrome-extension": ["crx"], "application/x-cocoa": ["cco"], "application/x-conference": ["nsc"], "application/x-cpio": ["cpio"], "application/x-csh": ["csh"], "application/x-debian-package": ["*deb", "udeb"], "application/x-dgc-compressed": ["dgc"], "application/x-director": ["dir", "dcr", "dxr", "cst", "cct", "cxt", "w3d", "fgd", "swa"], "application/x-doom": ["wad"], "application/x-dtbncx+xml": ["ncx"], "application/x-dtbook+xml": ["dtb"], "application/x-dtbresource+xml": ["res"], "application/x-dvi": ["dvi"], "application/x-envoy": ["evy"], "application/x-eva": ["eva"], "application/x-font-bdf": ["bdf"], "application/x-font-ghostscript": ["gsf"], "application/x-font-linux-psf": ["psf"], "application/x-font-pcf": ["pcf"], "application/x-font-snf": ["snf"], "application/x-font-type1": ["pfa", "pfb", "pfm", "afm"], "application/x-freearc": ["arc"], "application/x-futuresplash": ["spl"], "application/x-gca-compressed": ["gca"], "application/x-glulx": ["ulx"], "application/x-gnumeric": ["gnumeric"], "application/x-gramps-xml": ["gramps"], "application/x-gtar": ["gtar"], "application/x-hdf": ["hdf"], "application/x-httpd-php": ["php"], "application/x-install-instructions": ["install"], "application/x-iso9660-image": ["*iso"], "application/x-iwork-keynote-sffkey": ["*key"], "application/x-iwork-numbers-sffnumbers": ["*numbers"], "application/x-iwork-pages-sffpages": ["*pages"], "application/x-java-archive-diff": ["jardiff"], "application/x-java-jnlp-file": ["jnlp"], "application/x-keepass2": ["kdbx"], "application/x-latex": ["latex"], "application/x-lua-bytecode": ["luac"], "application/x-lzh-compressed": ["lzh", "lha"], "application/x-makeself": ["run"], "application/x-mie": ["mie"], "application/x-mobipocket-ebook": ["*prc", "mobi"], "application/x-ms-application": ["application"], "application/x-ms-shortcut": ["lnk"], "application/x-ms-wmd": ["wmd"], "application/x-ms-wmz": ["wmz"], "application/x-ms-xbap": ["xbap"], "application/x-msaccess": ["mdb"], "application/x-msbinder": ["obd"], "application/x-mscardfile": ["crd"], "application/x-msclip": ["clp"], "application/x-msdos-program": ["*exe"], "application/x-msdownload": ["*exe", "*dll", "com", "bat", "*msi"], "application/x-msmediaview": ["mvb", "m13", "m14"], "application/x-msmetafile": ["*wmf", "*wmz", "*emf", "emz"], "application/x-msmoney": ["mny"], "application/x-mspublisher": ["pub"], "application/x-msschedule": ["scd"], "application/x-msterminal": ["trm"], "application/x-mswrite": ["wri"], "application/x-netcdf": ["nc", "cdf"], "application/x-ns-proxy-autoconfig": ["pac"], "application/x-nzb": ["nzb"], "application/x-perl": ["pl", "pm"], "application/x-pilot": ["*prc", "*pdb"], "application/x-pkcs12": ["p12", "pfx"], "application/x-pkcs7-certificates": ["p7b", "spc"], "application/x-pkcs7-certreqresp": ["p7r"], "application/x-rar-compressed": ["*rar"], "application/x-redhat-package-manager": ["rpm"], "application/x-research-info-systems": ["ris"], "application/x-sea": ["sea"], "application/x-sh": ["sh"], "application/x-shar": ["shar"], "application/x-shockwave-flash": ["swf"], "application/x-silverlight-app": ["xap"], "application/x-sql": ["*sql"], "application/x-stuffit": ["sit"], "application/x-stuffitx": ["sitx"], "application/x-subrip": ["srt"], "application/x-sv4cpio": ["sv4cpio"], "application/x-sv4crc": ["sv4crc"], "application/x-t3vm-image": ["t3"], "application/x-tads": ["gam"], "application/x-tar": ["tar"], "application/x-tcl": ["tcl", "tk"], "application/x-tex": ["tex"], "application/x-tex-tfm": ["tfm"], "application/x-texinfo": ["texinfo", "texi"], "application/x-tgif": ["*obj"], "application/x-ustar": ["ustar"], "application/x-virtualbox-hdd": ["hdd"], "application/x-virtualbox-ova": ["ova"], "application/x-virtualbox-ovf": ["ovf"], "application/x-virtualbox-vbox": ["vbox"], "application/x-virtualbox-vbox-extpack": ["vbox-extpack"], "application/x-virtualbox-vdi": ["vdi"], "application/x-virtualbox-vhd": ["vhd"], "application/x-virtualbox-vmdk": ["vmdk"], "application/x-wais-source": ["src"], "application/x-web-app-manifest+json": ["webapp"], "application/x-x509-ca-cert": ["der", "crt", "pem"], "application/x-xfig": ["fig"], "application/x-xliff+xml": ["*xlf"], "application/x-xpinstall": ["xpi"], "application/x-xz": ["xz"], "application/x-zmachine": ["z1", "z2", "z3", "z4", "z5", "z6", "z7", "z8"], "audio/vnd.dece.audio": ["uva", "uvva"], "audio/vnd.digital-winds": ["eol"], "audio/vnd.dra": ["dra"], "audio/vnd.dts": ["dts"], "audio/vnd.dts.hd": ["dtshd"], "audio/vnd.lucent.voice": ["lvp"], "audio/vnd.ms-playready.media.pya": ["pya"], "audio/vnd.nuera.ecelp4800": ["ecelp4800"], "audio/vnd.nuera.ecelp7470": ["ecelp7470"], "audio/vnd.nuera.ecelp9600": ["ecelp9600"], "audio/vnd.rip": ["rip"], "audio/x-aac": ["*aac"], "audio/x-aiff": ["aif", "aiff", "aifc"], "audio/x-caf": ["caf"], "audio/x-flac": ["flac"], "audio/x-m4a": ["*m4a"], "audio/x-matroska": ["mka"], "audio/x-mpegurl": ["m3u"], "audio/x-ms-wax": ["wax"], "audio/x-ms-wma": ["wma"], "audio/x-pn-realaudio": ["ram", "ra"], "audio/x-pn-realaudio-plugin": ["rmp"], "audio/x-realaudio": ["*ra"], "audio/x-wav": ["*wav"], "chemical/x-cdx": ["cdx"], "chemical/x-cif": ["cif"], "chemical/x-cmdf": ["cmdf"], "chemical/x-cml": ["cml"], "chemical/x-csml": ["csml"], "chemical/x-xyz": ["xyz"], "image/prs.btif": ["btif", "btf"], "image/prs.pti": ["pti"], "image/vnd.adobe.photoshop": ["psd"], "image/vnd.airzip.accelerator.azv": ["azv"], "image/vnd.dece.graphic": ["uvi", "uvvi", "uvg", "uvvg"], "image/vnd.djvu": ["djvu", "djv"], "image/vnd.dvb.subtitle": ["*sub"], "image/vnd.dwg": ["dwg"], "image/vnd.dxf": ["dxf"], "image/vnd.fastbidsheet": ["fbs"], "image/vnd.fpx": ["fpx"], "image/vnd.fst": ["fst"], "image/vnd.fujixerox.edmics-mmr": ["mmr"], "image/vnd.fujixerox.edmics-rlc": ["rlc"], "image/vnd.microsoft.icon": ["ico"], "image/vnd.ms-dds": ["dds"], "image/vnd.ms-modi": ["mdi"], "image/vnd.ms-photo": ["wdp"], "image/vnd.net-fpx": ["npx"], "image/vnd.pco.b16": ["b16"], "image/vnd.tencent.tap": ["tap"], "image/vnd.valve.source.texture": ["vtf"], "image/vnd.wap.wbmp": ["wbmp"], "image/vnd.xiff": ["xif"], "image/vnd.zbrush.pcx": ["pcx"], "image/x-3ds": ["3ds"], "image/x-cmu-raster": ["ras"], "image/x-cmx": ["cmx"], "image/x-freehand": ["fh", "fhc", "fh4", "fh5", "fh7"], "image/x-icon": ["*ico"], "image/x-jng": ["jng"], "image/x-mrsid-image": ["sid"], "image/x-ms-bmp": ["*bmp"], "image/x-pcx": ["*pcx"], "image/x-pict": ["pic", "pct"], "image/x-portable-anymap": ["pnm"], "image/x-portable-bitmap": ["pbm"], "image/x-portable-graymap": ["pgm"], "image/x-portable-pixmap": ["ppm"], "image/x-rgb": ["rgb"], "image/x-tga": ["tga"], "image/x-xbitmap": ["xbm"], "image/x-xpixmap": ["xpm"], "image/x-xwindowdump": ["xwd"], "message/vnd.wfa.wsc": ["wsc"], "model/vnd.cld": ["cld"], "model/vnd.collada+xml": ["dae"], "model/vnd.dwf": ["dwf"], "model/vnd.gdl": ["gdl"], "model/vnd.gtw": ["gtw"], "model/vnd.mts": ["mts"], "model/vnd.opengex": ["ogex"], "model/vnd.parasolid.transmit.binary": ["x_b"], "model/vnd.parasolid.transmit.text": ["x_t"], "model/vnd.pytha.pyox": ["pyo", "pyox"], "model/vnd.sap.vds": ["vds"], "model/vnd.usda": ["usda"], "model/vnd.usdz+zip": ["usdz"], "model/vnd.valve.source.compiled-map": ["bsp"], "model/vnd.vtu": ["vtu"], "text/prs.lines.tag": ["dsc"], "text/vnd.curl": ["curl"], "text/vnd.curl.dcurl": ["dcurl"], "text/vnd.curl.mcurl": ["mcurl"], "text/vnd.curl.scurl": ["scurl"], "text/vnd.dvb.subtitle": ["sub"], "text/vnd.familysearch.gedcom": ["ged"], "text/vnd.fly": ["fly"], "text/vnd.fmi.flexstor": ["flx"], "text/vnd.graphviz": ["gv"], "text/vnd.in3d.3dml": ["3dml"], "text/vnd.in3d.spot": ["spot"], "text/vnd.sun.j2me.app-descriptor": ["jad"], "text/vnd.wap.wml": ["wml"], "text/vnd.wap.wmlscript": ["wmls"], "text/x-asm": ["s", "asm"], "text/x-c": ["c", "cc", "cxx", "cpp", "h", "hh", "dic"], "text/x-component": ["htc"], "text/x-fortran": ["f", "for", "f77", "f90"], "text/x-handlebars-template": ["hbs"], "text/x-java-source": ["java"], "text/x-lua": ["lua"], "text/x-markdown": ["mkd"], "text/x-nfo": ["nfo"], "text/x-opml": ["opml"], "text/x-org": ["*org"], "text/x-pascal": ["p", "pas"], "text/x-processing": ["pde"], "text/x-sass": ["sass"], "text/x-scss": ["scss"], "text/x-setext": ["etx"], "text/x-sfv": ["sfv"], "text/x-suse-ymp": ["ymp"], "text/x-uuencode": ["uu"], "text/x-vcalendar": ["vcs"], "text/x-vcard": ["vcf"], "video/vnd.dece.hd": ["uvh", "uvvh"], "video/vnd.dece.mobile": ["uvm", "uvvm"], "video/vnd.dece.pd": ["uvp", "uvvp"], "video/vnd.dece.sd": ["uvs", "uvvs"], "video/vnd.dece.video": ["uvv", "uvvv"], "video/vnd.dvb.file": ["dvb"], "video/vnd.fvt": ["fvt"], "video/vnd.mpegurl": ["mxu", "m4u"], "video/vnd.ms-playready.media.pyv": ["pyv"], "video/vnd.uvvu.mp4": ["uvu", "uvvu"], "video/vnd.vivo": ["viv"], "video/x-f4v": ["f4v"], "video/x-fli": ["fli"], "video/x-flv": ["flv"], "video/x-m4v": ["m4v"], "video/x-matroska": ["mkv", "mk3d", "mks"], "video/x-mng": ["mng"], "video/x-ms-asf": ["asf", "asx"], "video/x-ms-vob": ["vob"], "video/x-ms-wm": ["wm"], "video/x-ms-wmv": ["wmv"], "video/x-ms-wmx": ["wmx"], "video/x-ms-wvx": ["wvx"], "video/x-msvideo": ["avi"], "video/x-sgi-movie": ["movie"], "video/x-smv": ["smv"], "x-conference/x-cooltalk": ["ice"] };
+Object.freeze(types);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (types);
+//# sourceMappingURL=other.js.map
+
+/***/ }),
+
+/***/ "../media-library/node_modules/mime/dist/types/standard.js":
+/*!*****************************************************************!*\
+  !*** ../media-library/node_modules/mime/dist/types/standard.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const types = { "application/andrew-inset": ["ez"], "application/appinstaller": ["appinstaller"], "application/applixware": ["aw"], "application/appx": ["appx"], "application/appxbundle": ["appxbundle"], "application/atom+xml": ["atom"], "application/atomcat+xml": ["atomcat"], "application/atomdeleted+xml": ["atomdeleted"], "application/atomsvc+xml": ["atomsvc"], "application/atsc-dwd+xml": ["dwd"], "application/atsc-held+xml": ["held"], "application/atsc-rsat+xml": ["rsat"], "application/automationml-aml+xml": ["aml"], "application/automationml-amlx+zip": ["amlx"], "application/bdoc": ["bdoc"], "application/calendar+xml": ["xcs"], "application/ccxml+xml": ["ccxml"], "application/cdfx+xml": ["cdfx"], "application/cdmi-capability": ["cdmia"], "application/cdmi-container": ["cdmic"], "application/cdmi-domain": ["cdmid"], "application/cdmi-object": ["cdmio"], "application/cdmi-queue": ["cdmiq"], "application/cpl+xml": ["cpl"], "application/cu-seeme": ["cu"], "application/cwl": ["cwl"], "application/dash+xml": ["mpd"], "application/dash-patch+xml": ["mpp"], "application/davmount+xml": ["davmount"], "application/docbook+xml": ["dbk"], "application/dssc+der": ["dssc"], "application/dssc+xml": ["xdssc"], "application/ecmascript": ["ecma"], "application/emma+xml": ["emma"], "application/emotionml+xml": ["emotionml"], "application/epub+zip": ["epub"], "application/exi": ["exi"], "application/express": ["exp"], "application/fdf": ["fdf"], "application/fdt+xml": ["fdt"], "application/font-tdpfr": ["pfr"], "application/geo+json": ["geojson"], "application/gml+xml": ["gml"], "application/gpx+xml": ["gpx"], "application/gxf": ["gxf"], "application/gzip": ["gz"], "application/hjson": ["hjson"], "application/hyperstudio": ["stk"], "application/inkml+xml": ["ink", "inkml"], "application/ipfix": ["ipfix"], "application/its+xml": ["its"], "application/java-archive": ["jar", "war", "ear"], "application/java-serialized-object": ["ser"], "application/java-vm": ["class"], "application/javascript": ["*js"], "application/json": ["json", "map"], "application/json5": ["json5"], "application/jsonml+json": ["jsonml"], "application/ld+json": ["jsonld"], "application/lgr+xml": ["lgr"], "application/lost+xml": ["lostxml"], "application/mac-binhex40": ["hqx"], "application/mac-compactpro": ["cpt"], "application/mads+xml": ["mads"], "application/manifest+json": ["webmanifest"], "application/marc": ["mrc"], "application/marcxml+xml": ["mrcx"], "application/mathematica": ["ma", "nb", "mb"], "application/mathml+xml": ["mathml"], "application/mbox": ["mbox"], "application/media-policy-dataset+xml": ["mpf"], "application/mediaservercontrol+xml": ["mscml"], "application/metalink+xml": ["metalink"], "application/metalink4+xml": ["meta4"], "application/mets+xml": ["mets"], "application/mmt-aei+xml": ["maei"], "application/mmt-usd+xml": ["musd"], "application/mods+xml": ["mods"], "application/mp21": ["m21", "mp21"], "application/mp4": ["*mp4", "*mpg4", "mp4s", "m4p"], "application/msix": ["msix"], "application/msixbundle": ["msixbundle"], "application/msword": ["doc", "dot"], "application/mxf": ["mxf"], "application/n-quads": ["nq"], "application/n-triples": ["nt"], "application/node": ["cjs"], "application/octet-stream": ["bin", "dms", "lrf", "mar", "so", "dist", "distz", "pkg", "bpk", "dump", "elc", "deploy", "exe", "dll", "deb", "dmg", "iso", "img", "msi", "msp", "msm", "buffer"], "application/oda": ["oda"], "application/oebps-package+xml": ["opf"], "application/ogg": ["ogx"], "application/omdoc+xml": ["omdoc"], "application/onenote": ["onetoc", "onetoc2", "onetmp", "onepkg"], "application/oxps": ["oxps"], "application/p2p-overlay+xml": ["relo"], "application/patch-ops-error+xml": ["xer"], "application/pdf": ["pdf"], "application/pgp-encrypted": ["pgp"], "application/pgp-keys": ["asc"], "application/pgp-signature": ["sig", "*asc"], "application/pics-rules": ["prf"], "application/pkcs10": ["p10"], "application/pkcs7-mime": ["p7m", "p7c"], "application/pkcs7-signature": ["p7s"], "application/pkcs8": ["p8"], "application/pkix-attr-cert": ["ac"], "application/pkix-cert": ["cer"], "application/pkix-crl": ["crl"], "application/pkix-pkipath": ["pkipath"], "application/pkixcmp": ["pki"], "application/pls+xml": ["pls"], "application/postscript": ["ai", "eps", "ps"], "application/provenance+xml": ["provx"], "application/pskc+xml": ["pskcxml"], "application/raml+yaml": ["raml"], "application/rdf+xml": ["rdf", "owl"], "application/reginfo+xml": ["rif"], "application/relax-ng-compact-syntax": ["rnc"], "application/resource-lists+xml": ["rl"], "application/resource-lists-diff+xml": ["rld"], "application/rls-services+xml": ["rs"], "application/route-apd+xml": ["rapd"], "application/route-s-tsid+xml": ["sls"], "application/route-usd+xml": ["rusd"], "application/rpki-ghostbusters": ["gbr"], "application/rpki-manifest": ["mft"], "application/rpki-roa": ["roa"], "application/rsd+xml": ["rsd"], "application/rss+xml": ["rss"], "application/rtf": ["rtf"], "application/sbml+xml": ["sbml"], "application/scvp-cv-request": ["scq"], "application/scvp-cv-response": ["scs"], "application/scvp-vp-request": ["spq"], "application/scvp-vp-response": ["spp"], "application/sdp": ["sdp"], "application/senml+xml": ["senmlx"], "application/sensml+xml": ["sensmlx"], "application/set-payment-initiation": ["setpay"], "application/set-registration-initiation": ["setreg"], "application/shf+xml": ["shf"], "application/sieve": ["siv", "sieve"], "application/smil+xml": ["smi", "smil"], "application/sparql-query": ["rq"], "application/sparql-results+xml": ["srx"], "application/sql": ["sql"], "application/srgs": ["gram"], "application/srgs+xml": ["grxml"], "application/sru+xml": ["sru"], "application/ssdl+xml": ["ssdl"], "application/ssml+xml": ["ssml"], "application/swid+xml": ["swidtag"], "application/tei+xml": ["tei", "teicorpus"], "application/thraud+xml": ["tfi"], "application/timestamped-data": ["tsd"], "application/toml": ["toml"], "application/trig": ["trig"], "application/ttml+xml": ["ttml"], "application/ubjson": ["ubj"], "application/urc-ressheet+xml": ["rsheet"], "application/urc-targetdesc+xml": ["td"], "application/voicexml+xml": ["vxml"], "application/wasm": ["wasm"], "application/watcherinfo+xml": ["wif"], "application/widget": ["wgt"], "application/winhlp": ["hlp"], "application/wsdl+xml": ["wsdl"], "application/wspolicy+xml": ["wspolicy"], "application/xaml+xml": ["xaml"], "application/xcap-att+xml": ["xav"], "application/xcap-caps+xml": ["xca"], "application/xcap-diff+xml": ["xdf"], "application/xcap-el+xml": ["xel"], "application/xcap-ns+xml": ["xns"], "application/xenc+xml": ["xenc"], "application/xfdf": ["xfdf"], "application/xhtml+xml": ["xhtml", "xht"], "application/xliff+xml": ["xlf"], "application/xml": ["xml", "xsl", "xsd", "rng"], "application/xml-dtd": ["dtd"], "application/xop+xml": ["xop"], "application/xproc+xml": ["xpl"], "application/xslt+xml": ["*xsl", "xslt"], "application/xspf+xml": ["xspf"], "application/xv+xml": ["mxml", "xhvml", "xvml", "xvm"], "application/yang": ["yang"], "application/yin+xml": ["yin"], "application/zip": ["zip"], "audio/3gpp": ["*3gpp"], "audio/aac": ["adts", "aac"], "audio/adpcm": ["adp"], "audio/amr": ["amr"], "audio/basic": ["au", "snd"], "audio/midi": ["mid", "midi", "kar", "rmi"], "audio/mobile-xmf": ["mxmf"], "audio/mp3": ["*mp3"], "audio/mp4": ["m4a", "mp4a"], "audio/mpeg": ["mpga", "mp2", "mp2a", "mp3", "m2a", "m3a"], "audio/ogg": ["oga", "ogg", "spx", "opus"], "audio/s3m": ["s3m"], "audio/silk": ["sil"], "audio/wav": ["wav"], "audio/wave": ["*wav"], "audio/webm": ["weba"], "audio/xm": ["xm"], "font/collection": ["ttc"], "font/otf": ["otf"], "font/ttf": ["ttf"], "font/woff": ["woff"], "font/woff2": ["woff2"], "image/aces": ["exr"], "image/apng": ["apng"], "image/avci": ["avci"], "image/avcs": ["avcs"], "image/avif": ["avif"], "image/bmp": ["bmp", "dib"], "image/cgm": ["cgm"], "image/dicom-rle": ["drle"], "image/dpx": ["dpx"], "image/emf": ["emf"], "image/fits": ["fits"], "image/g3fax": ["g3"], "image/gif": ["gif"], "image/heic": ["heic"], "image/heic-sequence": ["heics"], "image/heif": ["heif"], "image/heif-sequence": ["heifs"], "image/hej2k": ["hej2"], "image/hsj2": ["hsj2"], "image/ief": ["ief"], "image/jls": ["jls"], "image/jp2": ["jp2", "jpg2"], "image/jpeg": ["jpeg", "jpg", "jpe"], "image/jph": ["jph"], "image/jphc": ["jhc"], "image/jpm": ["jpm", "jpgm"], "image/jpx": ["jpx", "jpf"], "image/jxr": ["jxr"], "image/jxra": ["jxra"], "image/jxrs": ["jxrs"], "image/jxs": ["jxs"], "image/jxsc": ["jxsc"], "image/jxsi": ["jxsi"], "image/jxss": ["jxss"], "image/ktx": ["ktx"], "image/ktx2": ["ktx2"], "image/png": ["png"], "image/sgi": ["sgi"], "image/svg+xml": ["svg", "svgz"], "image/t38": ["t38"], "image/tiff": ["tif", "tiff"], "image/tiff-fx": ["tfx"], "image/webp": ["webp"], "image/wmf": ["wmf"], "message/disposition-notification": ["disposition-notification"], "message/global": ["u8msg"], "message/global-delivery-status": ["u8dsn"], "message/global-disposition-notification": ["u8mdn"], "message/global-headers": ["u8hdr"], "message/rfc822": ["eml", "mime"], "model/3mf": ["3mf"], "model/gltf+json": ["gltf"], "model/gltf-binary": ["glb"], "model/iges": ["igs", "iges"], "model/jt": ["jt"], "model/mesh": ["msh", "mesh", "silo"], "model/mtl": ["mtl"], "model/obj": ["obj"], "model/prc": ["prc"], "model/step+xml": ["stpx"], "model/step+zip": ["stpz"], "model/step-xml+zip": ["stpxz"], "model/stl": ["stl"], "model/u3d": ["u3d"], "model/vrml": ["wrl", "vrml"], "model/x3d+binary": ["*x3db", "x3dbz"], "model/x3d+fastinfoset": ["x3db"], "model/x3d+vrml": ["*x3dv", "x3dvz"], "model/x3d+xml": ["x3d", "x3dz"], "model/x3d-vrml": ["x3dv"], "text/cache-manifest": ["appcache", "manifest"], "text/calendar": ["ics", "ifb"], "text/coffeescript": ["coffee", "litcoffee"], "text/css": ["css"], "text/csv": ["csv"], "text/html": ["html", "htm", "shtml"], "text/jade": ["jade"], "text/javascript": ["js", "mjs"], "text/jsx": ["jsx"], "text/less": ["less"], "text/markdown": ["md", "markdown"], "text/mathml": ["mml"], "text/mdx": ["mdx"], "text/n3": ["n3"], "text/plain": ["txt", "text", "conf", "def", "list", "log", "in", "ini"], "text/richtext": ["rtx"], "text/rtf": ["*rtf"], "text/sgml": ["sgml", "sgm"], "text/shex": ["shex"], "text/slim": ["slim", "slm"], "text/spdx": ["spdx"], "text/stylus": ["stylus", "styl"], "text/tab-separated-values": ["tsv"], "text/troff": ["t", "tr", "roff", "man", "me", "ms"], "text/turtle": ["ttl"], "text/uri-list": ["uri", "uris", "urls"], "text/vcard": ["vcard"], "text/vtt": ["vtt"], "text/wgsl": ["wgsl"], "text/xml": ["*xml"], "text/yaml": ["yaml", "yml"], "video/3gpp": ["3gp", "3gpp"], "video/3gpp2": ["3g2"], "video/h261": ["h261"], "video/h263": ["h263"], "video/h264": ["h264"], "video/iso.segment": ["m4s"], "video/jpeg": ["jpgv"], "video/jpm": ["*jpm", "*jpgm"], "video/mj2": ["mj2", "mjp2"], "video/mp2t": ["ts"], "video/mp4": ["mp4", "mp4v", "mpg4"], "video/mpeg": ["mpeg", "mpg", "mpe", "m1v", "m2v"], "video/ogg": ["ogv"], "video/quicktime": ["qt", "mov"], "video/webm": ["webm"] };
+Object.freeze(types);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (types);
+//# sourceMappingURL=standard.js.map
+
 /***/ })
 
 /******/ });
@@ -3469,11 +4042,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _client_lib_library_view_mjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../client-lib/library-view.mjs */ "./client-lib/library-view.mjs");
 /* harmony import */ var kalpa_tree_on_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! kalpa-tree-on-page */ "./node_modules/kalpa-tree-on-page/client-js/kalpa-tree-loader.js");
 
-(0,_index_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
+// go()
 
 
 // import ListView from '@webhandle/drag-sortable-list'
-;
+
 
 
 
